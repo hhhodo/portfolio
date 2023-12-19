@@ -1,0 +1,19 @@
+:root {
+/* colors */
+    --color-ivory: #F2F2EC;
+    --color-white: #fff;
+    --color-black: #100F0F;
+/* app colors*/
+    --color-primary: var(--color-white);
+    --color-primary-varient: var(--color-ivory);
+    --color-text: var(--color-black);
+}
+@font-face {
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}

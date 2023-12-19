@@ -1,19 +1,32 @@
-html { font-size: 62.5%; box-sizing: border-box; margin: 0; padding: 0;}
+* { font-size: 62.5%; box-sizing: border-box;}
 body {
-    background-color: #767676;
+    margin: 0;
+    padding: 0;
 }
-.grid_tile {
+.bg_grid {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100vw;
-    height: 100vw;
+    
+    background-color: var(--color-primary-varient);
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(auto-fit, minmax(8.5vw, 1fr));
-    grid-column-gap: 5vw;
-    grid-row-gap: 5vw;
+    grid-template-columns: repeat(16, auto);
+    grid-auto-rows: minmax(8vw, 10vw);
+    grid-gap: 0.5rem;
+
+    z-index: 1;
 }
-    .t_grid {
-        position: relative;
-        width: auto;
-        background-color: #fff;
-        border: 1px solid #000;
-    }
+.container {
+    width: 100vw;
+    display: grid;
+    color: var(--color-text);
+    z-index: 2;
+}
+
+/*버튼 설정*/
+button {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+}

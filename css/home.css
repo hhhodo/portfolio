@@ -1,0 +1,25 @@
+.main_home {
+
+}
+    .main_blank {
+        width: 100%;
+        height: 38rem;
+    }
+    .main_text_box {
+        padding: 0 26rem;
+        padding-bottom: 57rem;
+        display: flex;
+        flex-flow: column wrap;
+    }
+        .main_text_01 {
+            font-size: 8rem;
+            line-height: 9rem;
+            margin: 0;
+            font-weight: 700;
+        }
+        .main_text_02 {
+            width: 30rem;
+            font-size: 8rem;
+            font-family: 'CWDangamAsac-Bold';
+            font-weight: 400;
+        }
