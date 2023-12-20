@@ -1,0 +1,38 @@
+.main_intro {
+    display: grid;
+    
+}
+.intro_title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 4rem;
+}
+.intro_box {
+    display: grid;
+
+}
+.intro_text_grey {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+    color: var(--color-grey);
+}
+.intro_text_black {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    color: var(--color-text);
+}
+    .intro_text_number {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        font-weight: 400;
+
+        margin-right: 1.3rem;
+    }
+
+    .intro_skill_text {
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 1rem;
+    }

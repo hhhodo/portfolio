@@ -3,6 +3,7 @@
     --color-ivory: #F2F2EC;
     --color-white: #fff;
     --color-black: #100F0F;
+    --color-grey: #767676;
 /* app colors*/
     --color-primary: var(--color-white);
     --color-primary-varient: var(--color-ivory);
@@ -16,4 +17,5 @@
 }
 body {
     font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -2.5%;
 }
