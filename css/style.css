@@ -3,11 +3,15 @@
     --color-ivory: #F2F2EC;
     --color-white: #fff;
     --color-black: #100F0F;
-    --color-grey: #767676;
+    --color-grey-one: #767676;
+    --color-grey-two: #666;
 /* app colors*/
     --color-primary: var(--color-white);
     --color-primary-varient: var(--color-ivory);
     --color-text: var(--color-black);
+    --color-text-light: var(--color-grey-one);
+    --color-text-dark: var(--color-grey-two);
+
 }
 @font-face {
     font-family: 'CWDangamAsac-Bold';
