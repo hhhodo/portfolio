@@ -13,7 +13,7 @@
 .intro_title {
     grid-area: a;
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: var(--font-light);
     line-height: 4rem;
 }
 .intro_box {
@@ -22,20 +22,20 @@
 }
 .intro_text_grey {
     font-size: 1.4rem;
-    line-height: 2.4rem;
-    font-weight: 400;
+    line-height: 2.3rem;
+    font-weight: var(--font-regular);
     color: var(--color-text-light);
 }
 .intro_text_black {
     font-size: 1.4rem;
-    line-height: 2.4rem;
-    font-weight: 400;
+    line-height: 2.3rem;
+    font-weight: var(--font-reguler);
     color: var(--color-text);
 }
     .intro_text_span {
         font-size: 1.4rem;
-        line-height: 2.4rem;
-        font-weight: 400;
+        line-height: 2.3rem;
+        font-weight: var(--font-regular);
 
         margin-right: 1rem;
     }

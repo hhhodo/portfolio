@@ -11,7 +11,14 @@
     --color-text: var(--color-black);
     --color-text-light: var(--color-grey-one);
     --color-text-dark: var(--color-grey-two);
-
+/*font weight*/
+    --font-300: 300;
+    --font-500: 500;
+    --font-700: 700;
+/*app font*/
+    --font-light: var(--font-300);
+    --font-regular: var(--font-500);
+    --font-bold: var(--font-700);
 }
 @font-face {
     font-family: 'CWDangamAsac-Bold';
@@ -22,4 +29,5 @@
 body {
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -2.5%;
+    font-weight: var(--font-regular);
 }
