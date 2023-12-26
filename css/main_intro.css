@@ -29,13 +29,13 @@
 .intro_text_black {
     font-size: 1.4rem;
     line-height: 2.4rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--color-text);
 }
     .intro_text_span {
         font-size: 1.4rem;
         line-height: 2.4rem;
-        font-weight: 400;
+        font-weight: 500;
 
         margin-right: 1rem;
     }

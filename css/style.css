@@ -12,6 +12,8 @@
     --color-text-light: var(--color-grey-one);
     --color-text-dark: var(--color-grey-two);
 
+/*font-weight*/
+    
 }
 @font-face {
     font-family: 'CWDangamAsac-Bold';
