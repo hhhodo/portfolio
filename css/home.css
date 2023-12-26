@@ -7,7 +7,7 @@
     }
     .main_text_box {
         padding: 0 13%;
-        padding-bottom: 74rem;
+        padding-bottom: 51rem;
         display: flex;
         flex-flow: column wrap;
     }
@@ -15,11 +15,8 @@
             font-size: 8rem;
             line-height: 9rem;
             margin: 0;
-            font-weight: var(--font-bold);
-        }
-        .main_text_02 {
-            width: 30rem;
-            font-size: 8rem;
-            font-family: 'CWDangamAsac-Bold';
-            font-weight: 400;
+            font-weight: 700;
+
+            display: flex;
+            flex-flow: row nowrap;
         }

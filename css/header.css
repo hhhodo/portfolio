@@ -1,18 +1,55 @@
 .header {
     width: 100%;
-    height: 80px;
+    height: 8rem;
+
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 25rem;
+    padding: 0 6rem;
 
     z-index: 3;
 }
 
 .header {
-    font-size: 14pt;
+    font-size: 1.6rem;
+}
+
+.header_logo {
+    font-size: 1.8rem;
+    line-height: 8rem;
 }
 
 .hamburger {
     width: 48px;
     height: 48px;
+    display: none;
 }
+
+.home_menu {
+    display: flex;
+    flex-direction: row;
+}
+        .menu_name {
+            font-size: 1.6rem;
+            margin: 0 2.5rem;
+            line-height: 8rem;
+            color: var(--font-gray);
+            font-weight: var(--font-regular);
+        }
+
+        .act_menu {
+            color: var(--font-default);
+            font-weight: var(--font-500);
+        }
+        .act_menu::after {
+            content: "";
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-4px);
+            margin-top: -22px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--font-default);
+        }

@@ -1,6 +1,7 @@
 .main_intro {
     padding: 0 13%;
     margin: 0 2%;
+    padding-top: 19rem;
     padding-bottom: 50rem;
     display: grid;
     grid-template-areas:
@@ -22,20 +23,20 @@
 }
 .intro_text_grey {
     font-size: 1.4rem;
-    line-height: 2.3rem;
-    font-weight: var(--font-regular);
-    color: var(--color-text-light);
+    line-height: 2.4rem;
+    font-weight: 400;
+    color: var(--font-gray);
 }
 .intro_text_black {
     font-size: 1.4rem;
-    line-height: 2.3rem;
-    font-weight: var(--font-reguler);
-    color: var(--color-text);
+    line-height: 2.4rem;
+    font-weight: var(--font-500);
+    color: var(--font-default);
 }
     .intro_text_span {
         font-size: 1.4rem;
-        line-height: 2.3rem;
-        font-weight: var(--font-regular);
+        line-height: 2.4rem;
+        font-weight: var(--font-500);
 
         margin-right: 1rem;
     }

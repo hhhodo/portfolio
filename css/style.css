@@ -3,21 +3,21 @@
     --color-ivory: #F2F2EC;
     --color-white: #fff;
     --color-black: #100F0F;
-    --color-grey-one: #767676;
-    --color-grey-two: #666;
+    --color-grey: #767676;
 /* app colors*/
     --color-primary: var(--color-white);
     --color-primary-varient: var(--color-ivory);
-    --color-text: var(--color-black);
-    --color-text-light: var(--color-grey-one);
-    --color-text-dark: var(--color-grey-two);
-/*font weight*/
+    --font-default: var(--color-black);
+    --font-gray: var(--color-grey);
+
+/*font-weight*/
     --font-300: 300;
+    --font-400: 400;
     --font-500: 500;
     --font-700: 700;
-/*app font*/
+/*font 종류별*/
     --font-light: var(--font-300);
-    --font-regular: var(--font-500);
+    --font-regular: var(--font-400);
     --font-bold: var(--font-700);
 }
 @font-face {
@@ -29,5 +29,5 @@
 body {
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -2.5%;
-    font-weight: var(--font-regular);
+    cursor: default;
 }
