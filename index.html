@@ -16,16 +16,22 @@
     <link href="./css/main_intro.css" rel="stylesheet">
     <link href="./css/content.css" rel="stylesheet">
     <link href="./css/contact.css" rel="stylesheet">
+
+    <script type="module" src="./js/lottie.js" defer> </script>
     <title>박지은입니다.</title>
 </head>
 <body>
+    <!--lottie 링크-->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
     <div class="bg_grid">
     </div>
         <div class="container">
+            <!--header-->
             <header class="header">
                 <div class="header_logo"> PORTFOLIO </div>
                 <ul class="home_menu">
-                    <li class="menu_name"> HOME </li>
+                    <li class="menu_name act_menu"> HOME </li>
                     <li class="menu_name"> INTRO </li>
                     <li class="menu_name"> CONTENT </li>
                     <li class="menu_name"> CONTACT </li>
@@ -41,7 +47,13 @@
                         <p class="main_text_01">한땀한땀</p>
                         <p class="main_text_01">디자인하는</p>
                         <p class="main_text_01">
-                            <span class="main_text_02"><lottie-player src="https://hhhodo.github.io/js/nameTile" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop controls autoplay></lottie-player></span>
+                            <dotlottie-player
+                            mode="normal"
+                            style="width: 270px; height: 85px"
+                            src="./json/nn.json"
+                            background="transparent"
+                            speed="0.5" direction="1" loop autoplay>
+                        </dotlottie-player>
                             입니다.
                         </p>
                     </div>

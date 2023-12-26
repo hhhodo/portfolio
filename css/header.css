@@ -33,7 +33,24 @@
 }
         .menu_name {
             font-size: 1.6rem;
-            margin-left: 5rem;
+            margin: 0 2.5rem;
             line-height: 8rem;
-            font-weight: var(--);
+            color: var(--font-gray);
+            font-weight: var(--font-regular);
+        }
+
+        .act_menu {
+            color: var(--font-default);
+            font-weight: var(--font-500);
+        }
+        .act_menu::after {
+            content: "";
+            display: block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-4px);
+            margin-top: -22px;
+            width: 8px;
+            height: 8px;
+            background-color: var(--font-default);
         }
