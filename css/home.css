@@ -1,13 +1,9 @@
 .main_home {
-
+    margin: 0 13%;
+    padding-top: 30rem;
+    padding-bottom: 51rem;
 }
-    .main_blank {
-        width: 100%;
-        height: 30rem;
-    }
     .main_text_box {
-        padding: 0 13%;
-        padding-bottom: 51rem;
         display: flex;
         flex-flow: column wrap;
     }
