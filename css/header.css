@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    height: 9rem;
+    height: 8rem;
 
     position: fixed;
     top: 0;
@@ -25,7 +25,6 @@
 .hamburger {
     width: 48px;
     height: 48px;
-    display: none;
 }
 
 .home_menu {

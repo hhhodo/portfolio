@@ -1,43 +1,134 @@
+@charset "UTF-8";
+/* 그리드 컬럼 첫번째 칸의 값을 화면 전체로 하다가 사이즈 원래대로 복귀시키기?*/
 .content_grid {
   width: 100%;
+  overflow: hidden;
   display: grid;
-  grid-template-rows: repeat(5, minmax(16rem, auto));
-  background: #f90;
-  gap: 1rem;
+  grid-template-rows: repeat(5, 16rem);
+  background: #000;
+  padding-bottom: 2px;
 }
 
 .content_row_1 {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, minmax(16rem, auto));
-  grid-template-rows: minmax(16rem, auto);
+  grid-template-columns: repeat(12, minmax(12rem, auto));
+  padding-top: 2px;
+}
+
+.con_grid {
+  background: #fff;
+  margin-left: 2px;
+}
+
+.content_row_1 > .con_grid:nth-child(1) {
+  grid-column: 1/span 1;
 }
 
 .content_image_01 {
-  grid-column-start: 2;
-  background: #fff;
+  grid-column: 2/span 2;
+}
+
+.content_title_01 {
+  grid-column: 4/span 5;
+}
+
+.content_row_1 > .con_grid:nth-child(4) {
+  grid-column: 9/span 2;
+}
+
+.content_row_1 > .con_grid:nth-child(5) {
+  grid-column: 11/span 2;
 }
 
 .content_row_2 {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, minmax(16rem, auto));
+  grid-template-columns: repeat(12, minmax(12rem, auto));
+  padding-top: 2px;
+}
+
+.content_row_2 > .con_grid:nth-child(1) {
+  grid-column: 1/span 2;
+}
+
+.content_image_02 {
+  grid-column: 3/span 2;
+}
+
+.content_title_02 {
+  grid-column: 5/span 5;
+}
+
+.content_row_2 > .con_grid:nth-child(4) {
+  grid-column: 10/span 2;
+}
+
+.content_row_2 > .con_grid:nth-child(5) {
+  grid-column: 12/span 1;
 }
 
 .content_row_3 {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, minmax(16rem, auto));
+  grid-template-columns: repeat(12, minmax(12rem, auto));
+  padding-top: 2px;
+}
+
+.content_row_3 > .con_grid:nth-child(1) {
+  grid-column: 1/span 3;
+}
+
+.content_image_03 {
+  grid-column: 4/span 2;
+}
+
+.content_title_03 {
+  grid-column: 6/span 5;
+}
+
+.content_row_3 > .con_grid:nth-child(4) {
+  grid-column: 11/span 2;
 }
 
 .content_row_4 {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, minmax(16rem, auto));
+  grid-template-columns: repeat(12, minmax(12rem, auto));
+  padding-top: 2px;
+}
+
+.content_row_4 > .con_grid:nth-child(1) {
+  grid-column: 1/span 4;
+}
+
+.content_image_04 {
+  grid-column: 5/span 2;
+}
+
+.content_title_04 {
+  grid-column: 7/span 5;
+}
+
+.content_row_4 > .con_grid:nth-child(4) {
+  grid-column: 12/span 1;
 }
 
 .content_row_5 {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, minmax(16rem, auto));
+  grid-template-columns: repeat(12, minmax(12rem, auto));
+  padding-top: 2px;
+}
+
+.content_row_5 > .con_grid:nth-child(1) {
+  grid-column: 1/span 5;
+}
+
+.content_image_05 {
+  grid-column: 6/span 2;
+}
+
+.content_title_05 {
+  grid-column: 8/span 5;
 }
