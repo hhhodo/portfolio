@@ -1,3 +1,8 @@
+.intro_bg {
+    background: url(../images/Artboard.svg) no-repeat;
+    width: 100vw;
+}
+
 .main_intro {
     margin: 0 13%;
     padding-left: 2%;
