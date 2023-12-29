@@ -26,7 +26,7 @@
 <body>
     <!--lottie 링크-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script> 
+    <script src="/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
 
     <div class="bg_grid">
         <!--<img src="./images/profile_bg.svg" class="bgbg" width="100%">-->
@@ -68,58 +68,80 @@
                 <!--자기소개-->
                 <section class="main_intro">
                     <div class="main_intro_bg">
-                        <lottie-player id="test" class="bg_character" src="./json/profile_character.json" width="100%" autoplay></lottie-player>
+                        <lottie-player id="plz" class="bg_character" src="./json/profile_character.json" width="100%"></lottie-player>
+                        <script> 
+                            import '@lottiefiles/lottie-player'
+                            import LottieInteractivity from '@lottiefiles/lottie-interactivity'
+
+                            LottieInteractivity.create({
+                              player: '#plz',
+                              mode: 'scroll',
+                              actions: [
+                                {
+                                  visibility: [0,1],
+                                  type: 'seek',
+                                  frames: [0, 85],
+                                },
+                              ]
+                            });
+                          </script>
                         <lottie-player id="tests" class="bg_bg" src="./json/profile_bg.json" width="100%" autoplay></lottie-player>
                     </div>
+                        <!--텍스트 그리드-->
                         <div class="main_intro_text">
-                        <p class="intro_title">
-                            한땀한땀에 의미를 갖고<br>디자인합니다.
-                        </p>
-                        <ul class="intro_my">
-                            <li class="intro_text_grey">인적사항</li>
-                            <li class="intro_text_black">박지은</li>
-                            <li class="intro_text_black">2000.12.30</li>
-                            <li class="intro_text_black">서울시 은평구</li>
-                        </ul>
-                        <ul class="intro_edu">
-                            <li class="intro_text_grey">교육</li>
-                            <li class="intro_text_black">
-                                <span class="intro_text_span">2024.03</span>
-                                UIUX 퍼블리셔 과정 수료
-                            </li>
-                            <li class="intro_text_black">
-                                <span class="intro_text_span">2024.08</span>
-                                명지대학교 행정학과 졸업예정
-                            </li>
-                            <li class="intro_text_black">
-                                <span class="intro_text_span">2019.02</span>
-                                성사고등학교 졸업
-                            </li>
-                        </ul>
-                        <ul class="intro_contact">
-                            <li class="intro_text_grey">연락처</li>
-                            <li class="intro_text_black">010-4511-2004</li>
-                            <li class="intro_text_black">home212121@gmail.com</li>
-                        </ul>
-                        <ul class="intro_skill">
-                            <li class="intro_text_grey">
-                                스킬
-                            </li>
-                            <div class="intro_skill_text">
-                                <p class="intro_text_black">
-                                <span class="intro_text_span">포토샵</span>
-                                <span class="intro_text_span">일러스트</span>
-                                <span class="intro_text_span">피그마</span>
+                                <p class="intro_title">
+                                    한땀한땀에 의미를 갖고 디자인합니다.
                                 </p>
-                                <p class="intro_text_black">
-                                    <span class="intro_text_span">HTML</span>
-                                    <span class="intro_text_span">CSS</span>
-                                    <span class="intro_text_span">JavaScript</span>
-                                    <span class="intro_text_span">React</span>
-                                </p>
-                            </div>
-                        </ul>
-                    </div>
+                                <!--인적사항-->
+                                <ul class="intro_my">
+                                    <li class="intro_text_grey">인적사항</li>
+                                    <li class="intro_text_black">박지은</li>
+                                    <li class="intro_text_black">2000.12.30</li>
+                                    <li class="intro_text_black">서울시 은평구</li>
+                                </ul>
+                                <!--교육-->
+                                <ul class="intro_edu">
+                                    <li class="intro_text_grey">교육</li>
+                                    <li class="intro_text_black">
+                                        <span class="intro_text_span">2024.03</span>
+                                        UIUX 퍼블리셔 과정 수료
+                                    </li>
+                                    <li class="intro_text_black">
+                                        <span class="intro_text_span">2024.08</span>
+                                        명지대학교 행정학과 졸업예정
+                                    </li>
+                                    <li class="intro_text_black">
+                                        <span class="intro_text_span">2019.02</span>
+                                        성사고등학교 졸업
+                                    </li>
+                                </ul>
+                                <!--연락-->
+                                <ul class="intro_contact">
+                                    <li class="intro_text_grey">연락처</li>
+                                    <li class="intro_text_black">010-4511-2004</li>
+                                    <li class="intro_text_black">home212121@gmail.com</li>
+                                </ul>
+                                <!--스킬-->
+                                <ul class="intro_skill">
+                                    <li class="intro_text_grey">
+                                        스킬
+                                    </li>
+                                    <li><div class="intro_skill_text">
+                                            <p class="intro_text_black">
+                                            <span class="intro_text_span">포토샵</span>
+                                            <span class="intro_text_span">일러스트</span>
+                                            <span class="intro_text_span">피그마</span>
+                                            </p>
+                                            <p class="intro_text_black">
+                                                <span class="intro_text_span">HTML</span>
+                                                <span class="intro_text_span">CSS</span>
+                                                <span class="intro_text_span">JavaScript</span>
+                                                <span class="intro_text_span">React</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </div>
                 </section>
 
                 <!--포폴-->

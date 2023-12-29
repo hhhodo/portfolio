@@ -1,9 +1,17 @@
 .main_intro {
+    margin: 0 16.7%;
     position: relative;
     clear: both;
+    display: grid;
+    grid-template-areas:
+    "aa bb"
+    "cc bb"
+    "dd dd";
+    grid-template-columns: auto 55rem;
+    grid-template-rows: 60rem 40rem 50rem;
 }
         .main_intro_bg {
-            grid-area: f;
+            grid-area: bb;
             position: absolute;
             left: 0;
             top: 0;
@@ -19,17 +27,14 @@
                 }
 
         .main_intro_text {
-            margin: 0 13%;
-            padding-bottom: 50rem;
-            padding-left: 8%;
+            grid-area: cc;
             display: grid;
             grid-template-areas:
-            "h h f"
-            "a a f"
-            "b c f"
-            "d e f";
-            grid-template-columns: 22rem 26rem 55rem;
-            grid-template-rows: 35rem 14rem 12rem 12rem;
+            "a a"
+            "b c"
+            "d e";
+            grid-template-columns: 22rem 26rem;
+            grid-template-rows: 14rem 12rem 12rem;
         }
                 
         .intro_title {
