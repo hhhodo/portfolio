@@ -3,14 +3,10 @@ body {
     overflow: scroll;
    } 
 
-.bg_grid {
-    width: 100%;
-    z-index: 1;
-}
 .container {
     width: 100%;
     color: var(--color-text);
-    z-index: 2;
+    z-index: 10;
 }
 /**스크롤바 설정(투명 바)*/
 body::-webkit-scrollbar {
@@ -28,3 +24,4 @@ button {
 ul {
     list-style: none;
 }
+

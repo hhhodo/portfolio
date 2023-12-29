@@ -25,9 +25,11 @@
 </head>
 <body>
     <!--lottie 링크-->
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script> 
 
     <div class="bg_grid">
+        <!--<img src="./images/profile_bg.svg" class="bgbg" width="100%">-->
     </div>
 
         <div class="container">
@@ -52,13 +54,12 @@
                         <p class="main_text_01">한땀한땀</p>
                         <p class="main_text_01">디자인하는</p>
                         <p class="main_text_01">
-                            <dotlottie-player
-                            mode="normal"
-                            style="width: 270px; height: 85px"
+                            <lottie-player
+                            class="nametext"
                             src="./json/nn.json"
-                            background="transparent"
-                            speed="0.5" direction="1" loop autoplay>
-                        </dotlottie-player>
+                            width="100%"
+                            autoplay>
+                            </lottie-player>
                             입니다.
                         </p>
                     </div>
@@ -66,6 +67,10 @@
 
                 <!--자기소개-->
                 <section class="main_intro">
+                    <div class="rr">
+                    <lottie-player id="test" class="bg_character" src="./json/profile_character.json" width="100%" autoplay></lottie-player>
+                    <img src="./images/profile_bg.svg" class="bgbg" width="100%">
+                    </div>
                     <p class="intro_title">
                         한땀한땀에 의미를 갖고<br>디자인합니다.
                     </p>
