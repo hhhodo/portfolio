@@ -1,26 +1,63 @@
 .main_intro {
-    margin: 0 13%;
-    padding-left: 2%;
-    padding-top: 19rem;
-    padding-bottom: 50rem;
+    margin: 0 16.7%;
+    position: relative;
+    clear: both;
     display: grid;
     grid-template-areas:
-    "a a"
-    "b c"
-    "d e";
-    grid-template-columns: 22rem 26rem;
-    grid-template-rows: 14rem 12rem 12rem;
+    "aa bb"
+    "cc bb"
+    "dd dd";
+    grid-template-columns: auto 55rem;
+    grid-template-rows: 60rem 40rem 50rem;
 }
-.intro_title {
-    grid-area: a;
-    font-size: 3rem;
-    font-weight: var(--font-light);
-    line-height: 4rem;
-}
-.intro_box {
-    display: grid;
+        .main_intro_bg {
+            grid-area: bb;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+                .bg_bg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+                .bg_character {
+                    z-index: 3;
+                }
 
-}
+        .main_intro_text {
+            grid-area: cc;
+            display: grid;
+            grid-template-areas:
+            "a a"
+            "b c"
+            "d e";
+            grid-template-columns: 22rem 26rem;
+            grid-template-rows: 14rem 12rem 12rem;
+        }
+                
+        .intro_title {
+            grid-area: a;
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 4rem;
+        }
+        .intro_my {
+            grid-area: b;
+        }
+        .intro_edu {
+            grid-area: c;
+        }
+        .intro_contact {
+            grid-area: d;
+        }
+        .intro_skill {
+            grid-area: e;
+        }
+        .intro_box {
+            display: grid;
+        }
 .intro_text_grey {
     font-size: 1.4rem;
     line-height: 2.4rem;

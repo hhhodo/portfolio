@@ -1,0 +1,49 @@
+.footer_content {
+    width: 100%;
+    margin-top: 30rem;
+    display: grid;
+    grid-template-rows: 24rem 50rem 24rem;
+}
+    .puzzle_text {
+        margin: 0 auto;
+        margin-top: 22rem;
+        height: 2.4rem;
+
+        font-size: 1.6rem;
+        color: var(--font-gray);
+    }
+    .footer_mid {
+        margin: 0 auto;
+        padding-top: 3rem;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+            .footer_text {
+                width: 29rem;
+
+                font-size: 3rem;
+                font-weight: var(--font-bold);
+                margin: 21rem 9rem;
+            }
+                    .send_mail {
+                        display: flex;
+                        flex-flow: row nowrap;
+                    }
+            .puzzle {
+                width: 50rem;
+                height: 50rem;
+                background-color: blueviolet;
+            }
+    .footer_contact {
+        width: 60rem;
+        margin: 0 auto;
+        margin-top: 17.4rem;
+        padding-left: 1rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }            
+        .font_18 {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+        }
