@@ -23,6 +23,7 @@
     <script type="module" src="./js/lottie.js"> </script>
     <!--lottie 링크-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <title>박지은입니다.</title>
 </head>
 <body>
@@ -44,7 +45,7 @@
                 </ul>-->
                 <button class="hamburger"> 햄버거버튼 </button>
             </header>
-
+<!--화면비에 따라 변하게 비율 수정하기(2560/1440으로 볼 때 사이즈가 달라짐)-->
             <main class="main">
                 <div class="intro_bg">
                 <!--메인화면-->
@@ -68,9 +69,10 @@
                 <!--자기소개-->
                 <section class="main_intro">
                     <div class="main_intro_bg">
-                        <lottie-player id="plz" ref="myRef" class="bg_character" src="./json/profile_character.json" width="100%"></lottie-player>
-                        <!--<script type="module">
-                            import "@lottiefiles/lottie-player";
+                        <lottie-player id="plz" class="profile_character" autoplay width="100%"
+                         src="./json/profile_character.json"></lottie-player>
+                        <script type="module">
+                            /*import "@lottiefiles/lottie-player";
                             import { create } from "@lottiefiles/lottie-interactivity";
 
                             export default {
@@ -90,8 +92,8 @@
                                 });
                             });
                             }
-                        }
-                            /*LottieInteractivity.create({
+                        }*/
+                            LottieInteractivity.create({
                               player: '#plz',
                               mode: 'scroll',
                               actions: [
@@ -100,10 +102,11 @@
                                   type: 'seek',
                                   frames: [0, 85],
                                 },
-                              ]
-                            });*/
-                          </script>-->
-                        <lottie-player id="tests" class="bg_bg" src="./json/profile_bg.json" width="100%" autoplay></lottie-player>
+                              ] 
+                            });
+                          </script>
+                          <lottie-player class="profile_bg" autoplay width="100%"
+                          src="./json/profile_bg.json"></lottie-player>
                     </div>
                         <!--텍스트 그리드-->
                         <div class="main_intro_text">
@@ -144,7 +147,8 @@
                                     <li class="intro_text_grey">
                                         스킬
                                     </li>
-                                    <li><div class="intro_skill_text">
+                                    <li>
+                                        <div class="intro_skill_text">
                                             <p class="intro_text_black">
                                             <span class="intro_text_span">포토샵</span>
                                             <span class="intro_text_span">일러스트</span>

@@ -16,19 +16,14 @@
             left: 0;
             top: 0;
         }
-                .bg_bg {
+                .profile_character {
+                    width: 100%;
                     position: absolute;
                     left: 0;
                     top: 0;
-                    z-index: 1;
-                }
-                .bg_character {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
+
                     z-index: 3;
                 }
-
         .main_intro_text {
             grid-area: cc;
             display: grid;
