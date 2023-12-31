@@ -7,10 +7,11 @@
     "aa bb"
     "cc bb"
     "dd dd";
-    grid-template-columns: auto 55rem;
+    grid-template-columns: auto 28.5vw;
     grid-template-rows: 60rem 40rem 50rem;
 }
         .main_intro_bg {
+            width: 100%;
             grid-area: bb;
             position: absolute;
             left: 0;
