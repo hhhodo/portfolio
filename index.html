@@ -20,13 +20,12 @@
     <!--SCSS-->
     <link href="./css/contents.css" rel="stylesheet">
 
-    <script type="module" src="./js/lottie.js" defer> </script>
+    <script type="module" src="./js/lottie.js"> </script>
+    <!--lottie 링크-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>박지은입니다.</title>
 </head>
 <body>
-    <!--lottie 링크-->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
 
     <div class="bg_grid">
         <!--<img src="./images/profile_bg.svg" class="bgbg" width="100%">-->
@@ -58,7 +57,8 @@
                             class="nametext"
                             src="./json/nn.json"
                             width="100%"
-                            autoplay>
+                            autoplay
+                            speed="0.4">
                             </lottie-player>
                             입니다.
                         </p>
@@ -68,12 +68,30 @@
                 <!--자기소개-->
                 <section class="main_intro">
                     <div class="main_intro_bg">
-                        <lottie-player id="plz" class="bg_character" src="./json/profile_character.json" width="100%"></lottie-player>
-                        <script> 
-                            import '@lottiefiles/lottie-player'
-                            import LottieInteractivity from '@lottiefiles/lottie-interactivity'
+                        <lottie-player id="plz" ref="myRef" class="bg_character" src="./json/profile_character.json" width="100%"></lottie-player>
+                        <!--<script type="module">
+                            import "@lottiefiles/lottie-player";
+                            import { create } from "@lottiefiles/lottie-interactivity";
 
-                            LottieInteractivity.create({
+                            export default {
+                            name: "app",
+                            mounted () {
+                            this.$refs.myRef.addEventListener("load", function() {
+                                create({
+                                mode: "scroll",
+                                player: "#plz",
+                                actions: [
+                                {
+                                    visibility: [0, 1],
+                                    type: "seek",
+                                    frames: [0, 85],
+                                },
+                                ],
+                                });
+                            });
+                            }
+                        }
+                            /*LottieInteractivity.create({
                               player: '#plz',
                               mode: 'scroll',
                               actions: [
@@ -83,8 +101,8 @@
                                   frames: [0, 85],
                                 },
                               ]
-                            });
-                          </script>
+                            });*/
+                          </script>-->
                         <lottie-player id="tests" class="bg_bg" src="./json/profile_bg.json" width="100%" autoplay></lottie-player>
                     </div>
                         <!--텍스트 그리드-->
