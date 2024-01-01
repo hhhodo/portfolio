@@ -29,6 +29,7 @@
             grid-area: cc;
             position: relative;
             top: 30rem;
+            opacity: 0;
             display: grid;
             grid-template-areas:
             "a a"

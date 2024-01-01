@@ -2,6 +2,7 @@
 
 html {
     -webkit-text-size-adjust : none;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -10,6 +11,7 @@ html {
     height: 100%;
     color: var(--color-text);
 }
+
 /**스크롤바 설정(투명 바)*/
 body::-webkit-scrollbar {
     width: 14px;  /* 스크롤바의 너비 */
