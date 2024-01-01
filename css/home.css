@@ -1,16 +1,18 @@
-.main_home {
-    margin: 0 13%;
-    padding-top: 30rem;
-    padding-bottom: 51rem;
-}
-    .main_text_box {
-        display: flex;
-        flex-flow: column wrap;
+    .main_home {
+        width: 100%;
+        height: 200vh;
+        position: relative;
+
+        padding: 0 13%;
     }
+        .main_text_box {
+            position: sticky;
+            top: 30rem;
+        }
+
         .main_text_01 {
             font-size: 8rem;
             line-height: 9rem;
-            margin: 0;
             font-weight: 700;
 
             display: flex;
@@ -19,3 +21,8 @@
         .nametext {
             width: 27rem;
         }
+/*
+        margin: 0 13%;
+        padding-top: 30rem(28%);
+        padding-bottom: 51rem(47%);
+        */

@@ -1,5 +1,7 @@
 .main_intro {
-    margin: 0 16.7%;
+    width: 100%;
+    height: 200vh;
+    padding: 0 16.7%;
     position: relative;
     clear: both;
     display: grid;
@@ -8,25 +10,25 @@
     "cc bb"
     "dd dd";
     grid-template-columns: auto 28.5vw;
-    grid-template-rows: 60rem 40rem 50rem;
+    grid-template-rows: 40% 27% 33%;
 }
         .main_intro_bg {
+            position: sticky;
+            top: 0;
             width: 100%;
             grid-area: bb;
-            position: absolute;
-            left: 0;
-            top: 0;
         }
                 .profile_character {
-                    width: 100%;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-
-                    z-index: 3;
+                    z-index: 5;
                 }
+                .profile_bg {
+                    z-index: 1;
+                }
+
         .main_intro_text {
             grid-area: cc;
+            position: relative;
+            top: 30rem;
             display: grid;
             grid-template-areas:
             "a a"
@@ -36,27 +38,27 @@
             grid-template-rows: 14rem 12rem 12rem;
         }
                 
-        .intro_title {
-            grid-area: a;
-            font-size: 3rem;
-            font-weight: 300;
-            line-height: 4rem;
-        }
-        .intro_my {
-            grid-area: b;
-        }
-        .intro_edu {
-            grid-area: c;
-        }
-        .intro_contact {
-            grid-area: d;
-        }
-        .intro_skill {
-            grid-area: e;
-        }
-        .intro_box {
-            display: grid;
-        }
+                .intro_title {
+                    grid-area: a;
+                    font-size: 3rem;
+                    font-weight: 300;
+                    line-height: 4rem;
+                }
+                .intro_my {
+                    grid-area: b;
+                }
+                .intro_edu {
+                    grid-area: c;
+                }
+                .intro_contact {
+                    grid-area: d;
+                }
+                .intro_skill {
+                    grid-area: e;
+                }
+                .intro_box {
+                    display: grid;
+                }
 .intro_text_grey {
     font-size: 1.4rem;
     line-height: 2.4rem;

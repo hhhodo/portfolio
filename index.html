@@ -21,18 +21,14 @@
     <link href="./css/contents.css" rel="stylesheet">
 
     <script type="module" src="./js/lottie.js"> </script>
+    <script type="module" src="./js/smoothscroll.js" defer></script>
     <!--lottie 링크-->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <title>박지은입니다.</title>
 </head>
 <body>
-
-    <div class="bg_grid">
-        <!--<img src="./images/profile_bg.svg" class="bgbg" width="100%">-->
-    </div>
-
-        <div class="container">
+        <div class="container" id="container">
             <!--header-->
             <header class="header">
                 <div class="header_logo"> PORTFOLIO </div>
@@ -45,9 +41,8 @@
                 </ul>-->
                 <button class="hamburger"> 햄버거버튼 </button>
             </header>
-<!--화면비에 따라 변하게 비율 수정하기(2560/1440으로 볼 때 사이즈가 달라짐)-->
+            <!--MAIN-->
             <main class="main">
-                <div class="intro_bg">
                 <!--메인화면-->
                 <section class="main_home">
                     <div class="main_text_box">
@@ -55,11 +50,11 @@
                         <p class="main_text_01">디자인하는</p>
                         <p class="main_text_01">
                             <lottie-player
-                            class="nametext"
-                            src="./json/nn.json"
-                            width="100%"
-                            autoplay
-                            speed="0.4">
+                                class="nametext"
+                                src="./json/nn.json"
+                                width="100%"
+                                autoplay
+                                speed="0.4">
                             </lottie-player>
                             입니다.
                         </p>
@@ -70,166 +65,147 @@
                 <section class="main_intro">
                     <div class="main_intro_bg">
                         <lottie-player id="plz" class="profile_character" autoplay width="100%"
-                         src="./json/profile_character.json"></lottie-player>
+                        src="./json/profile_character2.json"></lottie-player>
                         <script type="module">
-                            /*import "@lottiefiles/lottie-player";
-                            import { create } from "@lottiefiles/lottie-interactivity";
-
-                            export default {
-                            name: "app",
-                            mounted () {
-                            this.$refs.myRef.addEventListener("load", function() {
-                                create({
-                                mode: "scroll",
-                                player: "#plz",
-                                actions: [
-                                {
-                                    visibility: [0, 1],
-                                    type: "seek",
-                                    frames: [0, 85],
-                                },
-                                ],
-                                });
-                            });
-                            }
-                        }*/
                             LottieInteractivity.create({
-                              player: '#plz',
-                              mode: 'scroll',
-                              actions: [
+                            player: '#plz',
+                            mode: 'scroll',
+                            actions: [
                                 {
-                                  visibility: [0,1],
-                                  type: 'seek',
-                                  frames: [0, 85],
+                                visibility: [0,1],
+                                type: 'seek',
+                                frames: [0, 85],
                                 },
-                              ] 
+                            ] 
                             });
-                          </script>
-                          <lottie-player class="profile_bg" autoplay width="100%"
-                          src="./json/profile_bg.json"></lottie-player>
+                        </script>
+                            <lottie-player class="profile_bg" autoplay width="100%"
+                            src="./json/profile_bg.json"></lottie-player>
                     </div>
                         <!--텍스트 그리드-->
                         <div class="main_intro_text">
-                                <p class="intro_title">
-                                    한땀한땀에 의미를 갖고 디자인합니다.
-                                </p>
-                                <!--인적사항-->
-                                <ul class="intro_my">
-                                    <li class="intro_text_grey">인적사항</li>
-                                    <li class="intro_text_black">박지은</li>
-                                    <li class="intro_text_black">2000.12.30</li>
-                                    <li class="intro_text_black">서울시 은평구</li>
-                                </ul>
-                                <!--교육-->
-                                <ul class="intro_edu">
-                                    <li class="intro_text_grey">교육</li>
-                                    <li class="intro_text_black">
-                                        <span class="intro_text_span">2024.03</span>
-                                        UIUX 퍼블리셔 과정 수료
-                                    </li>
-                                    <li class="intro_text_black">
-                                        <span class="intro_text_span">2024.08</span>
-                                        명지대학교 행정학과 졸업예정
-                                    </li>
-                                    <li class="intro_text_black">
-                                        <span class="intro_text_span">2019.02</span>
-                                        성사고등학교 졸업
-                                    </li>
-                                </ul>
-                                <!--연락-->
-                                <ul class="intro_contact">
-                                    <li class="intro_text_grey">연락처</li>
-                                    <li class="intro_text_black">010-4511-2004</li>
-                                    <li class="intro_text_black">home212121@gmail.com</li>
-                                </ul>
-                                <!--스킬-->
-                                <ul class="intro_skill">
-                                    <li class="intro_text_grey">
-                                        스킬
-                                    </li>
-                                    <li>
-                                        <div class="intro_skill_text">
-                                            <p class="intro_text_black">
-                                            <span class="intro_text_span">포토샵</span>
-                                            <span class="intro_text_span">일러스트</span>
-                                            <span class="intro_text_span">피그마</span>
-                                            </p>
-                                            <p class="intro_text_black">
-                                                <span class="intro_text_span">HTML</span>
-                                                <span class="intro_text_span">CSS</span>
-                                                <span class="intro_text_span">JavaScript</span>
-                                                <span class="intro_text_span">React</span>
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    <p class="intro_title">
+                                        한땀한땀에 의미를 갖고 디자인합니다.
+                                    </p>
+                                    <!--인적사항-->
+                                    <ul class="intro_my">
+                                        <li class="intro_text_grey">인적사항</li>
+                                        <li class="intro_text_black">박지은</li>
+                                        <li class="intro_text_black">2000.12.30</li>
+                                        <li class="intro_text_black">서울시 은평구</li>
+                                    </ul>
+                                    <!--교육-->
+                                    <ul class="intro_edu">
+                                        <li class="intro_text_grey">교육</li>
+                                        <li class="intro_text_black">
+                                            <span class="intro_text_span">2024.03</span>
+                                            UIUX 퍼블리셔 과정 수료
+                                        </li>
+                                        <li class="intro_text_black">
+                                            <span class="intro_text_span">2024.08</span>
+                                            명지대학교 행정학과 졸업예정
+                                        </li>
+                                        <li class="intro_text_black">
+                                            <span class="intro_text_span">2019.02</span>
+                                            성사고등학교 졸업
+                                        </li>
+                                    </ul>
+                                    <!--연락-->
+                                    <ul class="intro_contact">
+                                        <li class="intro_text_grey">연락처</li>
+                                        <li class="intro_text_black">010-4511-2004</li>
+                                        <li class="intro_text_black">home212121@gmail.com</li>
+                                    </ul>
+                                    <!--스킬-->
+                                    <ul class="intro_skill">
+                                        <li class="intro_text_grey">
+                                            스킬
+                                        </li>
+                                        <li>
+                                            <div class="intro_skill_text">
+                                                <p class="intro_text_black">
+                                                <span class="intro_text_span">포토샵</span>
+                                                <span class="intro_text_span">일러스트</span>
+                                                <span class="intro_text_span">피그마</span>
+                                                </p>
+                                                <p class="intro_text_black">
+                                                    <span class="intro_text_span">HTML</span>
+                                                    <span class="intro_text_span">CSS</span>
+                                                    <span class="intro_text_span">JavaScript</span>
+                                                    <span class="intro_text_span">React</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
                         </div>
                 </section>
 
                 <!--포폴-->
                 <!--첫 줄 길이를 스크롤에 따라 조절-->
-                <section class="content_grid">
-                    <div class="content_row_1">
-                            <div class="con_grid"> &nbsp; </div>
-                            <div class="content_image_01 con_grid">
-                                <img>
-                            </div>
-                            <div class="content_text_box content_title_01 con_grid">
-                                <p class="content_text_light">BI/BX DESIGN</p>
-                                <p class="content_text_title">박지은 브랜딩</p>
-                            </div>
-                            <div class="con_grid"> &nbsp; </div>
-                            <div class="con_grid"> &nbsp; </div>
-                    </div>
+                <div class="sticky">
+                    <section class="content_grid">
+                        <div class="content_row_1">
+                                <div class="con_grid"> &nbsp; </div>
+                                <div class="content_image_01 con_grid">
+                                    <img>
+                                </div>
+                                <div class="content_text_box content_title_01 con_grid">
+                                    <p class="content_text_light">BI/BX DESIGN</p>
+                                    <p class="content_text_title">박지은 브랜딩</p>
+                                </div>
+                                <div class="con_grid"> &nbsp; </div>
+                                <div class="con_grid"> &nbsp; </div>
+                        </div>
 
-                    <div class="content_row_2">
-                            <div class="con_grid"> &nbsp; </div>
-                            <div class="content_image_02 con_grid">
-                                <img> 이미지 삽입
-                            </div>
-                            <div class="content_text_box content_title_02 con_grid">
-                                <p class="content_text_light">UI/UX DESIGN</p>
-                                <p class="content_text_title">뜨개 모임 어플리케이션 뜨개더</p>
-                            </div>
-                            <div class="con_grid"> &nbsp; </div>
-                            <div class="con_grid"> &nbsp; </div>
-                    </div>
+                        <div class="content_row_2">
+                                <div class="con_grid"> &nbsp; </div>
+                                <div class="content_image_02 con_grid">
+                                    <img> 이미지 삽입
+                                </div>
+                                <div class="content_text_box content_title_02 con_grid">
+                                    <p class="content_text_light">UI/UX DESIGN</p>
+                                    <p class="content_text_title">뜨개 모임 어플리케이션 뜨개더</p>
+                                </div>
+                                <div class="con_grid"> &nbsp; </div>
+                                <div class="con_grid"> &nbsp; </div>
+                        </div>
 
-                    <div class="content_row_3">
-                            <div class="con_grid"> &nbsp; </div>
-                            <div class="content_image_03 con_grid">
-                                <img> 이미지 삽입
-                            </div>
-                            <div class="content_text_box content_title_03 con_grid">
-                                <p class="content_text_light">UI/UX DESIGN / PUBLISHING</p>
-                                <p class="content_text_title">쇼핑몰 홈페이지</p>
-                            </div>
-                            <div class="con_grid"> &nbsp; </div>
-                    </div>
+                        <div class="content_row_3">
+                                <div class="con_grid"> &nbsp; </div>
+                                <div class="content_image_03 con_grid">
+                                    <img> 이미지 삽입
+                                </div>
+                                <div class="content_text_box content_title_03 con_grid">
+                                    <p class="content_text_light">UI/UX DESIGN / PUBLISHING</p>
+                                    <p class="content_text_title">쇼핑몰 홈페이지</p>
+                                </div>
+                                <div class="con_grid"> &nbsp; </div>
+                        </div>
 
-                    <div class="content_row_4">
-                            <div class="con_grid"> &nbsp; </div>
-                            <div class="content_image_04 con_grid">
-                                <img> 이미지 삽입
-                            </div>
-                            <div class="content_text_box content_title_04 con_grid">
-                                <p class="content_text_light">UI/UX DESIGN / PUBLISHING</p>
-                                <p class="content_text_title">기업 홈페이지 00그룹</p>
-                            </div>
-                            <div class="con_grid"> &nbsp; </div>
-                    </div>
+                        <div class="content_row_4">
+                                <div class="con_grid"> &nbsp; </div>
+                                <div class="content_image_04 con_grid">
+                                    <img> 이미지 삽입
+                                </div>
+                                <div class="content_text_box content_title_04 con_grid">
+                                    <p class="content_text_light">UI/UX DESIGN / PUBLISHING</p>
+                                    <p class="content_text_title">기업 홈페이지 00그룹</p>
+                                </div>
+                                <div class="con_grid"> &nbsp; </div>
+                        </div>
 
-                    <div class="content_row_5">
-                            <div class="con_grid"> &nbsp; </div>
-                            <div class="content_image_05 con_grid">
-                                <img> 이미지 삽입
-                            </div>
-                            <div class="content_text_box content_title_05 con_grid">
-                                <p class="content_text_light">GRAPHIC DESIGN</p>
-                                <p class="content_text_title">일러스트 작업 모음</p>
-                            </div>
-                    </div>
-                </section>
+                        <div class="content_row_5">
+                                <div class="con_grid"> &nbsp; </div>
+                                <div class="content_image_05 con_grid">
+                                    <img> 이미지 삽입
+                                </div>
+                                <div class="content_text_box content_title_05 con_grid">
+                                    <p class="content_text_light">GRAPHIC DESIGN</p>
+                                    <p class="content_text_title">일러스트 작업 모음</p>
+                                </div>
+                        </div>
+                    </section>
+                </div>
 
                 </div>
             </main>
