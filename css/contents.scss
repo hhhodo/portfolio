@@ -1,4 +1,5 @@
-$column_repeat: repeat(12, minmax(12rem, auto));
+$column_repeat: 12rem repeat(11, minmax(12rem, auto));
+$column_repeat_animation: 100vw repeat(11, minmax(12rem, auto));
 
 $image_span: span 2;
 $text_span: span 5;
@@ -6,7 +7,9 @@ $text_span: span 5;
 /* 그리드 컬럼 첫번째 칸의 값을 화면 전체로 하다가 사이즈 원래대로 복귀시키기?*/
 .content_grid {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 
     display: grid;
     grid-template-rows: repeat(5, minmax(16rem, auto));
@@ -15,15 +18,19 @@ $text_span: span 5;
 }
     .content_row_1 {
         width: 100%;
-
         display: grid;
         grid-template-columns: $column_repeat;
         padding-top: 2px;
+        transition: all 500ms;
     }
-            .con_grid {
+    .content_row_1:hover {
+        padding-left: 100%;
+        transition: all 1s;
+    }
+    .con_grid {
                 background: #fff;
                 margin-left: 2px;
-            }
+    }
             .content_row_1>.con_grid:nth-child(1) {
                 grid-column: 1 / span 1;
             }
@@ -45,6 +52,11 @@ $text_span: span 5;
         display: grid;
         grid-template-columns: $column_repeat;
         padding-top: 2px;
+        transition: all 500ms;
+    }
+    .content_row_2:hover {
+        padding-left: 100%;
+        transition: all 1s;
     }
             .content_row_2>.con_grid:nth-child(1) {
                 grid-column: 1 / span 2;
@@ -67,6 +79,11 @@ $text_span: span 5;
         display: grid;
         grid-template-columns: $column_repeat;
         padding-top: 2px;
+        transition: all 500ms;
+    }
+    .content_row_3:hover {
+        padding-left: 100%;
+        transition: all 1s;
     }
             .content_row_3>.con_grid:nth-child(1) {
                 grid-column: 1 / span 3;
@@ -86,6 +103,11 @@ $text_span: span 5;
         display: grid;
         grid-template-columns: $column_repeat;
         padding-top: 2px;
+        transition: all 500ms;
+    }
+    .content_row_4:hover {
+        padding-left: 100%;
+        transition: all 1s;
     }
             .content_row_4>.con_grid:nth-child(1) {
                 grid-column: 1 / span 4;
@@ -105,6 +127,11 @@ $text_span: span 5;
         display: grid;
         grid-template-columns:  $column_repeat;
         padding-top: 2px;
+        transition: all 500ms;
+    }
+    .content_row_5:hover {
+        padding-left: 100%;
+        transition: all 1s;
     }
             .content_row_5>.con_grid:nth-child(1) {
                 grid-column: 1 / span 5;

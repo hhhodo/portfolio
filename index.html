@@ -22,8 +22,7 @@
 
     <script type="module" src="./js/lottie.js"> </script>
     <script type="module" src="./js/smoothscroll.js" defer></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="module" src="./js/contentHover.js" defer></script>
 
     <!--lottie 링크-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
@@ -54,98 +53,114 @@
                         <p class="main_text_01">
                             <lottie-player
                                 class="nametext"
-                                src="./json/nn.json"
+                                src="./json/nameTitle.json"
                                 width="100%"
                                 autoplay
-                                speed="0.4">
+                                speed="1">
                             </lottie-player>
                             입니다.
                         </p>
                     </div>
                 </section>
 
+                <div class="con_blank"></div>
+
                 <!--자기소개-->
-                <section class="main_intro">
-                    <div class="main_intro_bg">
-                        <lottie-player id="plz" class="profile_character" autoplay width="100%"
-                        src="./json/profile_character2.json"></lottie-player>
-                        <script type="module">
-                            LottieInteractivity.create({
-                            player: '#plz',
-                            mode: 'scroll',
-                            actions: [
-                                {
-                                visibility: [0,1],
-                                type: 'seek',
-                                frames: [0, 85],
-                                },
-                            ] 
-                            });
-                        </script>
-                            <lottie-player class="profile_bg" autoplay width="100%"
-                            src="./json/profile_bg.json"></lottie-player>
-                    </div>
+                <section class="main_intro"  id="containerId">
+                    <div class="sticky">
+                        
                         <!--텍스트 그리드-->
                         <div class="main_intro_text">
-                                    <p class="intro_title">
-                                        한땀한땀에 의미를 갖고 디자인합니다.
-                                    </p>
-                                    <!--인적사항-->
-                                    <ul class="intro_my">
-                                        <li class="intro_text_grey">인적사항</li>
-                                        <li class="intro_text_black">박지은</li>
-                                        <li class="intro_text_black">2000.12.30</li>
-                                        <li class="intro_text_black">서울시 은평구</li>
-                                    </ul>
-                                    <!--교육-->
-                                    <ul class="intro_edu">
-                                        <li class="intro_text_grey">교육</li>
-                                        <li class="intro_text_black">
-                                            <span class="intro_text_span">2024.03</span>
-                                            UIUX 퍼블리셔 과정 수료
-                                        </li>
-                                        <li class="intro_text_black">
-                                            <span class="intro_text_span">2024.08</span>
-                                            명지대학교 행정학과 졸업예정
-                                        </li>
-                                        <li class="intro_text_black">
-                                            <span class="intro_text_span">2019.02</span>
-                                            성사고등학교 졸업
-                                        </li>
-                                    </ul>
-                                    <!--연락-->
-                                    <ul class="intro_contact">
-                                        <li class="intro_text_grey">연락처</li>
-                                        <li class="intro_text_black">010-4511-2004</li>
-                                        <li class="intro_text_black">home212121@gmail.com</li>
-                                    </ul>
-                                    <!--스킬-->
-                                    <ul class="intro_skill">
-                                        <li class="intro_text_grey">
-                                            스킬
-                                        </li>
-                                        <li>
-                                            <div class="intro_skill_text">
-                                                <p class="intro_text_black">
-                                                <span class="intro_text_span">포토샵</span>
-                                                <span class="intro_text_span">일러스트</span>
-                                                <span class="intro_text_span">피그마</span>
-                                                </p>
-                                                <p class="intro_text_black">
-                                                    <span class="intro_text_span">HTML</span>
-                                                    <span class="intro_text_span">CSS</span>
-                                                    <span class="intro_text_span">JavaScript</span>
-                                                    <span class="intro_text_span">React</span>
-                                                </p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        <p class="intro_title">
+                                            한땀한땀에 의미를 갖고 디자인합니다.
+                                        </p>
+                                        <!--인적사항-->
+                                        <ul class="intro_my">
+                                            <li class="intro_text_grey">인적사항</li>
+                                            <li class="intro_text_black">박지은</li>
+                                            <li class="intro_text_black">2000.12.30</li>
+                                            <li class="intro_text_black">서울시 은평구</li>
+                                        </ul>
+                                        <!--교육-->
+                                        <ul class="intro_edu">
+                                            <li class="intro_text_grey">교육</li>
+                                            <li class="intro_text_black">
+                                                <span class="intro_text_span">2024.03</span>
+                                                UIUX 퍼블리셔 과정 수료
+                                            </li>
+                                            <li class="intro_text_black">
+                                                <span class="intro_text_span">2024.08</span>
+                                                명지대학교 행정학과 졸업예정
+                                            </li>
+                                            <li class="intro_text_black">
+                                                <span class="intro_text_span">2019.02</span>
+                                                성사고등학교 졸업
+                                            </li>
+                                        </ul>
+                                        <!--연락-->
+                                        <ul class="intro_contact">
+                                            <li class="intro_text_grey">연락처</li>
+                                            <li class="intro_text_black">010-4511-2004</li>
+                                            <li class="intro_text_black">home212121@gmail.com</li>
+                                        </ul>
+                                        <!--스킬-->
+                                        <ul class="intro_skill">
+                                            <li class="intro_text_grey">
+                                                스킬
+                                            </li>
+                                            <li>
+                                                <div class="intro_skill_text">
+                                                    <p class="intro_text_black">
+                                                    <span class="intro_text_span">포토샵</span>
+                                                    <span class="intro_text_span">일러스트</span>
+                                                    <span class="intro_text_span">피그마</span>
+                                                    </p>
+                                                    <p class="intro_text_black">
+                                                        <span class="intro_text_span">HTML</span>
+                                                        <span class="intro_text_span">CSS</span>
+                                                        <span class="intro_text_span">JavaScript</span>
+                                                        <span class="intro_text_span">React</span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ul>
                         </div>
+                        <!--이미지-->
+                        <div class="main_intro_bg">
+                            <lottie-player id="plz" class="profile_character" width="100%"
+                            src="./json/profile_character2.json"></lottie-player>
+                            <script type="module">
+                                LottieInteractivity.create({
+                                player: '#plz',
+                                mode: 'scroll',
+                                container: '#containerId',
+                                actions: [
+                                    {
+                                    visibility: [0, 0.4],
+                                    type: "stop",
+                                    frames: [0]
+                                    }, {
+                                    visibility: [0.4,0.8],
+                                    type: 'seek',
+                                    frames: [1, 84],
+                                    }, {
+                                    visibility: [0.8,1],
+                                    type: 'stop',
+                                    frames: [84,85],
+                                    }
+                                ] 
+                                });
+                            </script>
+                                <lottie-player class="profile_bg" autoplay width="100%"
+                                src="./json/profile_bg2.json"></lottie-player>
+                        </div>
+                    </div>
                 </section>
 
                 <!--포폴-->
                 <!--첫 줄 길이를 스크롤에 따라 조절-->
-                <div class="sticky">
+                <div class="con_blank"></div>
+                <div class="content_all">
                     <section class="content_grid">
                         <div class="content_row_1">
                                 <div class="con_grid"> &nbsp; </div>
@@ -209,11 +224,10 @@
                         </div>
                     </section>
                 </div>
-
-                </div>
             </main>
 
             <footer class="footer">
+                <div class="con_blank"></div>
                 <div class="footer_content">
                     <div class="puzzle_text"> 퍼즐을 밀어보세요 </div>
 

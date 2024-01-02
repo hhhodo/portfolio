@@ -1,12 +1,12 @@
     .main_home {
         width: 100%;
-        height: 200vh;
+        height: 100vh;
         position: relative;
 
         padding: 0 13%;
     }
         .main_text_box {
-            position: relative;
+            position: sticky;
             top: 30rem;
         }
 
