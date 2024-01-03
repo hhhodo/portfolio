@@ -20,14 +20,28 @@
     --font-regular: var(--font-400);
     --font-bold: var(--font-700);
 }
-@font-face {
-    font-family: 'CWDangamAsac-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 body {
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -2.5%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
     cursor: default;
+}
+/*mouse cursor*/
+.mouse_cursor {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: url(../images/mouse_cursor.svg) no-repeat;
+    mix-blend-mode: difference;
+
+    pointer-events: none;
+    transition: all 50ms;
+    z-index: 999;
+
+    
+	will-change: transform;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
 }

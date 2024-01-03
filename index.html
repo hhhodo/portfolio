@@ -23,6 +23,7 @@
     <script type="module" src="./js/lottie.js"> </script>
     <script type="module" src="./js/smoothscroll.js" defer></script>
     <script type="module" src="./js/contentHover.js" defer></script>
+    <script type="module" src="./js/cursor.js" defer></script>
 
     <!--lottie 링크-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
@@ -30,18 +31,12 @@
     <title>박지은입니다.</title>
 </head>
 <body>
+    <div class="mouse_cursor">
         <div class="container" id="container">
             <!--header-->
             <header class="header">
                 <div class="header_logo"> PORTFOLIO </div>
-                <!--
-                <ul class="home_menu">
-                    <li class="menu_name act_menu" href="#home"> HOME </li>
-                    <li class="menu_name" href="#intro"> INTRO </li>
-                    <li class="menu_name" href="#content"> CONTENT </li>
-                    <li class="menu_name" href="#contact"> CONTACT </li>
-                </ul>-->
-                <button class="hamburger"> 햄버거버튼 </button>
+                <button class="hamburger"></button>
             </header>
             <!--MAIN-->
             <main class="main">
@@ -157,9 +152,10 @@
                     </div>
                 </section>
 
+                <div class="con_blank"></div>
+                
                 <!--포폴-->
                 <!--첫 줄 길이를 스크롤에 따라 조절-->
-                <div class="con_blank"></div>
                 <div class="content_all">
                     <section class="content_grid">
                         <div class="content_row_1">
