@@ -19,6 +19,8 @@
     --font-light: var(--font-300);
     --font-regular: var(--font-400);
     --font-bold: var(--font-700);
+/*영문폰트*/
+    --font-english: 'Montserrat', sans-serif;
 }
 body {
     font-family: 'Noto Sans KR', sans-serif;
@@ -35,47 +37,62 @@ body {
     left: 0;
     top: 0;
     display: block;
-    background: url(../images/background_gradient.svg) no-repeat;
-    background-position: center;
     border-radius: 100%;
     transform:translate(-80%,-50%);
+    transition: display 500ms;
     z-index: 1;
 }
-/*mouse cursor*/
+.hoverarea {
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
+    width: 50vh;
+    height: 50vh;
+    z-index: 11;
+}
+/*==================mouse cursor====================*/
 .mouse_cursor {
     width: 15px;
     height: 15px;
-    background: #fff;
-    mix-blend-mode: difference;
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 70%);
     transform:translate(-50%,-50%);
 
-    position: fixed;
     will-change: left, top;
+    position: fixed;
     left: 0;
     top: 0;
 
+    border-radius: 0%;
     pointer-events: none;
-    transition: all 50ms;
     z-index: 99;
+    
+    transition: all 50ms;
+    transition: width 300ms ease-out, height 300ms ease-out;
 }
         .blue_gradient {
             width: 350px;
             height: 350px;
             background: radial-gradient(circle, rgba(41,163,206,1) 45%, rgba(255,255,255,0) 70%);
-            mix-blend-mode: normal;
-            transition: all 50ms;
+            border-radius: 100%;
+            z-index: 3;
         }
-        .mix_blend {
-            mix-blend-mode: normal;
+        .hover {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
         }
 .cursor_active {
     width: 350px;
     height: 350px;
     background: radial-gradient(circle, rgb(255, 255, 255) 45%, rgba(255,255,255,0) 70%);
-    mix-blend-mode: normal;
-    border-radius: 0;
-    border: none;
+    border-radius: 100%;
     transition: all 50ms;
-    transition: width 0.5, height 0.5;
-    z-index: 4;
+    transition: width 300ms ease-out, height 300ms ease-out;
+    z-index: 21;
 }
+        .mouse_cursor.cursor_active.hover {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: #fff;
+        }

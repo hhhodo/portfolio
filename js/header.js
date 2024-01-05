@@ -1,27 +1,33 @@
+//===============네비게이션메뉴====================//
 const hamBurger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".overlay");
 const mouseCursor = document.querySelector(".mouse_cursor");
+const blueCursor = document.querySelector('.blue_gradient');
 //===============버튼 불러오기====================//
+const navText = document.querySelectorAll(".overlay li");
 
 //==============observer 타겟====================//
 const mainHome = document.querySelector('.main_home');
 const mainIntro = document.querySelector('.main_intro');
 const fooTer = document.querySelector('.footer');
+
 //첫 페이지 observe
 const targetArea = document.querySelector('.backgradient');
+const hoverArea = document.querySelector('.hoverarea');
 
-//
+//fade 효과
 window.onload = function() {
 
 const observer = new IntersectionObserver((e) => {
     
-    //특정 요소 오퍼시티 조절
     e.forEach((fade) => {
         if(fade.isIntersecting){
             fade.target.style.opacity = 1;
+            
         } else {
             fade.target.style.opacity = 0;
         }
+        
     })
 }, { threshold: 0.3 });
 
@@ -47,16 +53,36 @@ window.addEventListener("mousemove", (e) => {
     mouseCursor.style.top = mouseY + 'px';
     targetArea.style.left = oppositeX + 'px';
     targetArea.style.top = oppositeY + 'px';
+    
+    //일정 높이 지났을 때 그라데이션 사라짐
+    if(window.scrollY < 800) {
+        targetArea.style.display = 'block';
+    } else {
+        targetArea.style.display = 'none';
+    }
 });
-//마우스가 첫화면일때
-targetArea.addEventListener("mouseenter", (e) => {
-    console.log("Mouse entered:",targetArea);
+//특정 버튼 호버시 커서 변경
+navText.forEach(link => {
+    link.addEventListener("mouseover", ()=> {
+        mouseCursor.classList.add('hover');
+    })
+    link.addEventListener("mouseout", ()=> {
+        mouseCursor.classList.remove('hover');
+    })
+});
+
+//마우스가 첫 화면의 그라데이션에 호버했을때
+hoverArea.addEventListener("mouseover", (e) => {
     mouseCursor.classList.add('blue_gradient');
 });
-targetArea.addEventListener("mouseleave", (e) => {
-    console.log("Mouse leaved:",targetArea);
-    mouseCursor.classList.remove('blue_gradient');
+hoverArea.addEventListener("mouseout", (e) => {
+    mouseCursor.classList.add('hover');
+    setTimeout(() => {
+        mouseCursor.classList.remove('blue_gradient');
+        mouseCursor.classList.remove('hover');
+    }, 300);
 });
+
 
 //hamburger 버튼 작동 시
 hamBurger.addEventListener('click', () => {
@@ -65,6 +91,11 @@ hamBurger.addEventListener('click', () => {
     navMenu.classList.toggle('open');
     mouseCursor.classList.toggle('cursor_active');
 });
+hamBurger.addEventListener('mouseover', () => {
+    mouseCursor.classList.add('hover');
+})
+hamBurger.addEventListener('mouseout', () => {
+    mouseCursor.classList.remove('hover');
+})
 
-//창을 클릭하면 네비게이션 메뉴 사라지게
 }
