@@ -27,6 +27,20 @@ body {
     height: 100%;
     background-color: #fff;
 }
+/*커서 호버 영역*/
+.backgradient {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    background: url(../images/background_gradient.svg) no-repeat;
+    background-position: center;
+    border-radius: 100%;
+    transform:translate(-80%,-50%);
+    z-index: 1;
+}
 /*mouse cursor*/
 .mouse_cursor {
     width: 15px;
@@ -44,19 +58,11 @@ body {
     transition: all 50ms;
     z-index: 99;
 }
-        .main_home.is-intersecting .mouse_cursor {
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(41,163,206,1) 45%, rgba(255,255,255,0) 70%);
-            mix-blend-mode: multiply;
-            transition: all 50ms;
-        }
-
         .blue_gradient {
             width: 350px;
             height: 350px;
             background: radial-gradient(circle, rgba(41,163,206,1) 45%, rgba(255,255,255,0) 70%);
-            mix-blend-mode: multiply;
+            mix-blend-mode: normal;
             transition: all 50ms;
         }
         .mix_blend {
@@ -71,5 +77,5 @@ body {
     border: none;
     transition: all 50ms;
     transition: width 0.5, height 0.5;
-    z-index: 2;
+    z-index: 4;
 }

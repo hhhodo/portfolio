@@ -8,7 +8,7 @@ const mainHome = document.querySelector('.main_home');
 const mainIntro = document.querySelector('.main_intro');
 const fooTer = document.querySelector('.footer');
 //첫 페이지 observe
-const targetPage = document.querySelector('.main_home');
+const targetArea = document.querySelector('.backgradient');
 
 //
 window.onload = function() {
@@ -29,27 +29,34 @@ const observer = new IntersectionObserver((e) => {
 observer.observe(mainHome);
 observer.observe(mainIntro);
 observer.observe(fooTer);
-observer.observe(targetPage);
 
 //마우스 커서 변경
 window.addEventListener("mousemove", (e) => {
-    
-    var pY = e.pageY;
-    console.log(pY);
-    if(pY <= 1200){
-        mouseCursor.classList.add('blue_gradient');
-    } else {
-        mouseCursor.classList.remove('blue_gradient');
-    };
-
     const mouseX = e.clientX;
     const mouseY = e.clientY;
+
+    // 화면 중심 좌표 계산
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    // 마우스 좌표와 상반되는 위치 계산
+    const oppositeX = centerX + (centerX - mouseX);
+    const oppositeY = centerY + (centerY - mouseY);
+
     mouseCursor.style.left = mouseX + 'px';
     mouseCursor.style.top = mouseY + 'px';
-})
-
+    targetArea.style.left = oppositeX + 'px';
+    targetArea.style.top = oppositeY + 'px';
+});
 //마우스가 첫화면일때
-    
+targetArea.addEventListener("mouseenter", (e) => {
+    console.log("Mouse entered:",targetArea);
+    mouseCursor.classList.add('blue_gradient');
+});
+targetArea.addEventListener("mouseleave", (e) => {
+    console.log("Mouse leaved:",targetArea);
+    mouseCursor.classList.remove('blue_gradient');
+});
 
 //hamburger 버튼 작동 시
 hamBurger.addEventListener('click', () => {
