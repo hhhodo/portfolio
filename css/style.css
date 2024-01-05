@@ -26,22 +26,50 @@ body {
     width: 100%;
     height: 100%;
     background-color: #fff;
-    cursor: default;
 }
 /*mouse cursor*/
 .mouse_cursor {
-    position: fixed;
-    width: 400px;
-    height: 400px;
-    background: url(../images/mouse_cursor.svg) no-repeat;
+    width: 15px;
+    height: 15px;
+    background: #fff;
     mix-blend-mode: difference;
+    transform:translate(-50%,-50%);
+
+    position: fixed;
+    will-change: left, top;
+    left: 0;
+    top: 0;
 
     pointer-events: none;
     transition: all 50ms;
-    z-index: 999;
+    z-index: 99;
+}
+        .main_home.is-intersecting .mouse_cursor {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(41,163,206,1) 45%, rgba(255,255,255,0) 70%);
+            mix-blend-mode: multiply;
+            transition: all 50ms;
+        }
 
-    
-	will-change: transform;
-    transform:translate(-50%,-50%);
-    pointer-events:none;
+        .blue_gradient {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(41,163,206,1) 45%, rgba(255,255,255,0) 70%);
+            mix-blend-mode: multiply;
+            transition: all 50ms;
+        }
+        .mix_blend {
+            mix-blend-mode: normal;
+        }
+.cursor_active {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgb(255, 255, 255) 45%, rgba(255,255,255,0) 70%);
+    mix-blend-mode: normal;
+    border-radius: 0;
+    border: none;
+    transition: all 50ms;
+    transition: width 0.5, height 0.5;
+    z-index: 2;
 }

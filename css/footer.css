@@ -1,20 +1,15 @@
-.footer_content {
+.footer {
     width: 100%;
-    margin-top: 30rem;
-    display: grid;
-    grid-template-rows: 24rem 50rem 24rem;
+    height: 100vh;
+    padding-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: all 1s;
 }
-    .puzzle_text {
-        margin: 0 auto;
-        margin-top: 22rem;
-        height: 2.4rem;
-
-        font-size: 1.6rem;
-        color: var(--font-gray);
-    }
     .footer_mid {
         margin: 0 auto;
-        padding-top: 3rem;
         display: flex;
         flex-flow: row nowrap;
     }

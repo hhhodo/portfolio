@@ -3,7 +3,8 @@
     height: 150vh;
 }
 .content_text_box {
-    padding-top: 4.5rem;
+    height: 100%;
+    padding: 4rem;
     padding-left: 6rem;
 }
     .content_text_light {

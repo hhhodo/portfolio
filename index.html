@@ -6,7 +6,7 @@
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!--css-->
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
@@ -20,10 +20,9 @@
     <!--SCSS-->
     <link href="./css/contents.css" rel="stylesheet">
 
+    <script type="module" src="./js/header.js"> </script>
     <script type="module" src="./js/lottie.js"> </script>
-    <script type="module" src="./js/smoothscroll.js" defer></script>
     <script type="module" src="./js/contentHover.js" defer></script>
-    <script type="module" src="./js/cursor.js" defer></script>
 
     <!--lottie 링크-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
@@ -31,17 +30,25 @@
     <title>박지은입니다.</title>
 </head>
 <body>
-    <div class="mouse_cursor">
+    <div class="mouse_cursor"></div>
         <div class="container" id="container">
             <!--header-->
             <header class="header">
                 <div class="header_logo"> PORTFOLIO </div>
                 <button class="hamburger"></button>
             </header>
+            <div class="overlay">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            </div>
             <!--MAIN-->
-            <main class="main">
+            <main class="main" id="home">
                 <!--메인화면-->
-                <section class="main_home">
+                <section class="main_home" id="targetPage">
                     <div class="main_text_box">
                         <p class="main_text_01">한땀한땀</p>
                         <p class="main_text_01">디자인하는</p>
@@ -221,12 +228,10 @@
                     </section>
                 </div>
             </main>
+            
+            <div class="con_blank"></div>
 
             <footer class="footer">
-                <div class="con_blank"></div>
-                <div class="footer_content">
-                    <div class="puzzle_text"> 퍼즐을 밀어보세요 </div>
-
                     <div class="footer_mid">
                         <p class="footer_text"> 하나의 그림을 완성하는 </p>
                         <div class="puzzle"> 퍼즐 </div>
@@ -244,7 +249,6 @@
                         <p class="font_18"> home212121@gmail.com </p>
                         <p class="font_18"> 010-4511-2004 </p>
                     </div>
-                </div>
             </footer>
         </div>
 </body>

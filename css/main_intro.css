@@ -4,6 +4,8 @@
     padding: 0 16.7%;
     position: relative;
     clear: both;
+    opacity: 0;
+    transition: all 1s;
 }
     .sticky {
         position: sticky;

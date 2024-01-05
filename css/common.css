@@ -2,7 +2,7 @@
 
 html {
     -webkit-text-size-adjust : none;
-    scroll-behavior: smooth;
+    cursor: none;
 }
 
 .container {
@@ -13,7 +13,7 @@ html {
 }
 .con_blank {
     width: 100%;
-    height: 80vh;
+    height: 30vh;
 }
 
 /**스크롤바 설정(투명 바)*/
@@ -31,5 +31,9 @@ button {
 
 ul {
     list-style: none;
+}
+
+li {
+    text-decoration: none;
 }
 
