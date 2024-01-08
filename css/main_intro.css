@@ -6,6 +6,7 @@
     position: relative;
     clear: both;
     opacity: 0;
+    word-break: keep-all;
     transition: all 1s ease-out;
 }
     .sticky {
@@ -17,25 +18,27 @@
         .main_intro_bg {
             width: 55rem;
             height: 100rem;
-            position: relative;
-            float: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
         }
                 .profile_character {
-                    width: 55rem;
+                    width: 100%;
                     position: absolute;
                     left: 0;
                     top: 0;
-                    z-index: 5;
+                    z-index: 2;
                 }
                 .profile_bg {
-                    width: 55rem;
+                    width: 100%;
                     z-index: 1;
                 }
 
         .main_intro_text {
-            padding-top: 35rem;
-            position: relative;
-            float: left;
+            position: absolute;
+            left: 0;
+            top: 35rem;
             display: grid;
             grid-template-areas:
             "a a"
@@ -43,6 +46,7 @@
             "d e";
             grid-template-columns: 22rem 26rem;
             grid-template-rows: 14rem 12rem 12rem;
+            z-index: 3;
         }
                 
                 .intro_title {

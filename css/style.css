@@ -42,7 +42,11 @@ body {
     transition: display 500ms;
     z-index: 1;
 }
+        .back_gradient {
+            display: block;
+        }
 .hoverarea {
+    display: block;
     position: absolute;
     left: 25vw;
     top: 25vh;
@@ -62,6 +66,7 @@ body {
     left: 0;
     top: 0;
 
+    display: block;
     border-radius: 0%;
     pointer-events: none;
     z-index: 99;

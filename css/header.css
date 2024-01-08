@@ -37,6 +37,7 @@
     background: radial-gradient(circle, rgb(255, 255, 255) 45%, rgb(255, 255, 255) 100%);
     opacity: 0;
     transition: all 300ms;
+    display: none;
 }
 .overlay ul {
     width: 100%;
@@ -67,4 +68,5 @@
             opacity: 1;
             z-index: 20;
             transition: all 300ms;
+            display: none;
         }
