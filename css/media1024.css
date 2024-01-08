@@ -40,7 +40,26 @@
     .main_text_01 {font-size: 5rem; line-height: 6rem; flex-flow: row wrap;}
     .nametext {width: 25rem;}
     /*main_intro*/
-    .sticky {height: 200vh;}
-    .main_intro_bg { position: sticky; top: 10rem; width: 100%; height: 80rem;}
-    .main_intro_text {top: 55rem;}
+    .sticky {position: absolute; height: 200vh;}
+    .main_intro_bg { position: sticky; top: 0; width: 100%; height: 100vh; right: 10%;}
+    .main_intro_text {
+        position: sticky;
+        top: 100vh;
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, auto);
+        grid-gap: 3.5rem;
+    }
+    .intro_title { margin-bottom: 2.8rem;}
+    /*footer*/
+    .footer_mid {flex-flow: row wrap;}
+    .footer_text {font-size: 1.8rem;}
+    .footer_contact {flex-flow: column wrap; justify-content: center;}
+    .font_18 { font-size: 1.6rem; line-height: 2.8rem;}
+    .font_18:nth-child(1) {margin-bottom: 2rem;}
 }

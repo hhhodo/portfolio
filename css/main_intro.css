@@ -19,6 +19,7 @@
             width: 55rem;
             height: 100rem;
             position: absolute;
+            padding: 0;
             top: 0;
             right: 0;
             z-index: 1;
@@ -46,10 +47,12 @@
             "d e";
             grid-template-columns: 22rem 26rem;
             grid-template-rows: 14rem 12rem 12rem;
+            grid-gap: 0;
             z-index: 3;
         }
                 
                 .intro_title {
+                    word-break: keep-all;
                     grid-area: a;
                     font-size: 3rem;
                     font-weight: 300;

@@ -34,6 +34,8 @@
             .puzzle {
                 max-width: 50rem;
                 max-height: 50rem;
+                width: 50rem;
+                height: 50rem;
                 background-color: blueviolet;
             }
     .footer_contact {
@@ -48,4 +50,8 @@
         .font_18 {
             font-size: 1.8rem;
             line-height: 2.6rem;
+        }
+        .font_18:nth-child(1) {
+            font-size: 1.8rem;
+            margin-bottom: 0;
         }
