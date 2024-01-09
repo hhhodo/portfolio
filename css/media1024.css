@@ -27,7 +27,7 @@
     .content_text_title { font-size: 2.4rem; line-height: 3rem;}
     /*나중에 더 손볼것*/
     /*footer*/
-    .footer_mid {margin: 0 5rem;}
+    .footer_mid {margin: 0;}
     .footer_text {width: 24rem; font-size: 2.4rem; margin: 14% 3rem;}
     .puzzle {width: 35%; height: 35vw;}
 }
@@ -35,6 +35,7 @@
     /*header*/
     .header {height: 6rem; padding: 0 2.4rem;}
     .header_logo {line-height: 6rem;}
+    .hamburger {width: 5rem;}
     /*home*/
     .main { width: 100%;}
     .main_text_01 {font-size: 5rem; line-height: 6rem; flex-flow: row wrap;}
@@ -57,8 +58,8 @@
     }
     .intro_title { margin-bottom: 2.8rem;}
     /*footer*/
-    .footer_mid {flex-flow: row wrap;}
-    .footer_text {font-size: 1.8rem;}
+    .footer_mid {flex-flow: row wrap; justify-content: center;}
+    .footer_text {font-size: 2rem;}
     .footer_contact {flex-flow: column wrap; justify-content: center;}
     .font_18 { font-size: 1.6rem; line-height: 2.8rem;}
     .font_18:nth-child(1) {margin-bottom: 2rem;}
