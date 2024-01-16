@@ -58,7 +58,7 @@
     }
     .intro_title { margin-bottom: 2.8rem;}
     /*footer*/
-    .footer_mid {flex-flow: row wrap; justify-content: center;}
+    .footer_mid {flex-flow: column wrap; align-items: center;}
     .footer_text {font-size: 2rem;}
     .footer_contact {flex-flow: column wrap; justify-content: center;}
     .font_18 { font-size: 1.6rem; line-height: 2.8rem;}
