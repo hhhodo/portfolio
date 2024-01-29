@@ -56,7 +56,7 @@
         grid-template-rows: repeat(5, auto);
         grid-gap: 3.5rem;
     }
-    .intro_title { margin-bottom: 2.8rem;}
+    .intro_title {width: 80%; margin-bottom: 2.8rem;}
     /*contents all*/
     .content_text_box {
         padding: 0 1.6rem;
