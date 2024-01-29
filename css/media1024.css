@@ -42,7 +42,7 @@
     .nametext {width: 25rem;}
     /*main_intro*/
     .sticky {position: absolute; height: 200vh;}
-    .main_intro_bg { position: sticky; top: 0; width: 100%; height: 100vh; right: 10%;}
+    .main_intro_bg { position: sticky; top: 0; width: 100%; height: 80vh; right: 10%;}
     .main_intro_text {
         position: sticky;
         top: 100vh;
@@ -58,6 +58,7 @@
     }
     .intro_title {width: 80%; margin-bottom: 2.8rem;}
     /*contents all*/
+    .content_grid { max-height: 130rem;}
     .content_text_box {
         padding: 0 1.6rem;
     }
