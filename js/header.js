@@ -85,11 +85,31 @@ hoverArea.addEventListener("mouseout", (e) => {
 
 
 //hamburger 버튼 작동 시
-hamBurger.addEventListener('click', () => {
+let clickCount = 0;
 
+hamBurger.addEventListener('click', () => {
     hamBurger.classList.toggle('cancel');
-    navMenu.classList.toggle('open');
     mouseCursor.classList.toggle('cursor_active');
+    clickCount++; // 클릭 수 증가
+
+    if (clickCount % 2 !== 0) {
+        // 홀수 번째 클릭일 때
+        navMenu.style.height = "100vh";
+        navMenu.classList.add('open');
+    } else {
+        // 짝수 번째 클릭일 때
+        navMenu.style.height = "0";
+        navMenu.classList.remove('open');
+    }
+});
+
+// transitionend 이벤트를 사용하여 애니메이션이 완료된 후에 클래스 추가/제거
+navMenu.addEventListener('transitionend', () => {
+    if (navMenu.classList.contains('open')) {
+        navMenu.style.height = "100vh";
+    } else {
+        navMenu.style.height = "0";
+    }
 });
 hamBurger.addEventListener('mouseover', () => {
     mouseCursor.classList.add('hover');
