@@ -167,9 +167,16 @@
         }
 
     /*footer*/
+    .footer_blank {
+        height: auto;
+    }
     .footer_mid {flex-flow: column wrap; align-items: center;}
-    .footer_text {font-size: 2rem;}
-    .footer_contact {flex-flow: column wrap; justify-content: center;}
+        .puzzle {width: calc(100% - 2rem); height: auto;}
+    .footer_text {font-size: 2.4rem; margin: 2rem auto;}
+        .send_mail {
+            justify-content: center;
+        }
+    .footer_contact {width: auto; flex-flow: column wrap; justify-content: center;}
     .font_18 { font-size: 1.6rem; line-height: 2.8rem;}
     .font_18:nth-child(1) {margin-bottom: 2rem;}
 }

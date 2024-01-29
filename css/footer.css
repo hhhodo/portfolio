@@ -1,13 +1,17 @@
 .footer {
     width: 100%;
     height: 100vh;
-    padding-top: 20rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    
     opacity: 0;
     transition: all 1s ease-out;
 }
+    .footer_blank {
+        width: 100%;
+        height: 13rem;
+    }
     .footer_mid {
         margin: 0 auto;
         display: flex;
@@ -25,34 +29,31 @@
                     .send_mail {
                         display: flex;
                         flex-flow: row nowrap;
+                        justify-content: left;
                         height: 2.4rem;
                     }
                             .font_16 {
                                 font-size: 1.6rem;
                                 font-weight: var(--font-regular);
                             }
-                            .send_mail>div {display: flex; align-items: center;}
+                            .send_mail>div {display: flex; align-items: center; }
             .puzzle {
-                max-width: 50rem;
-                max-height: 50rem;
-                width: 50rem;
-                height: 50rem;
-                background-color: blueviolet;
+                max-width: 70rem;
+                max-height: 80rem;
+                width: 65rem;
+                height: 65rem;
             }
     .footer_contact {
         width: 60rem;
+        height: 12.6rem;
         margin: 0 auto;
-        margin-top: 17.4rem;
         padding-left: 1rem;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
+        align-items: center;
     }            
         .font_18 {
             font-size: 1.8rem;
             line-height: 2.6rem;
-        }
-        .font_18:nth-child(1) {
-            font-size: 1.8rem;
-            margin-bottom: 0;
         }
