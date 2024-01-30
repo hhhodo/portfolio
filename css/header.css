@@ -33,10 +33,10 @@
 .overlay {
     position: fixed;
     width: 100%;
-    height: 0;
+    height: 0%;
     background: radial-gradient(circle, rgb(255, 255, 255) 45%, rgb(255, 255, 255) 100%);
     transition: all 300ms;
-    display: none;
+    overflow: hidden;
 }
 .overlay ul {
     width: 100%;
@@ -63,9 +63,8 @@
     cursor: none;
 }
         .overlay.open {
-            height: 0;
+            height: 100%;
             background: radial-gradient(circle, rgb(41,163,206) 45%, rgb(41,163,206) 100%);
             z-index: 20;
             transition: all 300ms;
-            display: block;
         }

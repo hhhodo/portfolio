@@ -76,25 +76,18 @@ window.onload = function () {
   var clickCount = 0;
   hamBurger.addEventListener('click', function () {
     hamBurger.classList.toggle('cancel');
-    mouseCursor.classList.toggle('cursor_active');
+    mouseCursor.classList.toggle('cursor_active'); //navMenu 자연스럽게
+
     clickCount++; // 클릭 수 증가
 
     if (clickCount % 2 !== 0) {
-      // 홀수 번째 클릭일 때
-      navMenu.style.height = "100vh";
+      navMenu.style.height = '100%';
       navMenu.classList.add('open');
     } else {
-      // 짝수 번째 클릭일 때
-      navMenu.style.height = "0";
-      navMenu.classList.remove('open');
-    }
-  }); // transitionend 이벤트를 사용하여 애니메이션이 완료된 후에 클래스 추가/제거
-
-  navMenu.addEventListener('transitionend', function () {
-    if (navMenu.classList.contains('open')) {
-      navMenu.style.height = "100vh";
-    } else {
-      navMenu.style.height = "0";
+      navMenu.style.height = '0';
+      setTimeout(function () {
+        navMenu.classList.remove('open');
+      }, 300);
     }
   });
   hamBurger.addEventListener('mouseover', function () {
