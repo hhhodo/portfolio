@@ -85,11 +85,38 @@ hoverArea.addEventListener("mouseout", (e) => {
 
 
 //hamburger 버튼 작동 시
-hamBurger.addEventListener('click', () => {
+let clickCount = 0;
 
+navMenu.addEventListener('click', () => {
     hamBurger.classList.toggle('cancel');
-    navMenu.classList.toggle('open');
     mouseCursor.classList.toggle('cursor_active');
+    clickCount++; // 클릭 수 증가
+
+    if (clickCount % 2 !== 0) {
+        navMenu.style.height = '100%';
+        navMenu.classList.add('open');
+    } else {
+        navMenu.style.height = '0';
+        setTimeout(() => {
+            navMenu.classList.remove('open')
+        }, 300);
+    }
+})
+hamBurger.addEventListener('click', () => {
+    hamBurger.classList.toggle('cancel');
+    mouseCursor.classList.toggle('cursor_active');
+
+    clickCount++; // 클릭 수 증가
+
+    if (clickCount % 2 !== 0) {
+        navMenu.style.height = '100%';
+        navMenu.classList.add('open');
+    } else {
+        navMenu.style.height = '0';
+        setTimeout(() => {
+            navMenu.classList.remove('open')
+        }, 300);
+    }
 });
 hamBurger.addEventListener('mouseover', () => {
     mouseCursor.classList.add('hover');

@@ -17,7 +17,7 @@ $text_span: span 5;
     background: #000;
     padding-bottom: 2px;
 }
-    .content_row_1 {
+    .content_row_1, .content_row_2, .content_row_3, .content_row_4, .content_row_5 {
         width: 100%;
         display: grid;
         grid-template-columns: $column_repeat;
@@ -33,135 +33,93 @@ $text_span: span 5;
                 margin-left: 2px;
     }
             .content_row_1>.con_grid:nth-child(1) {
-                display: block;
                 grid-column: 1 / span 1;
             }
             .content_image_01 {
-                display: block;
                 grid-column: 2 / $image_span;
             }
             .content_title_01 {
-                display: block;
                 grid-column: 4 / $text_span;
             }
             .content_row_1>.con_grid:nth-child(4) {
-                display: block;
                 grid-column: 9 / $image_span;
             }
             .content_row_1>.con_grid:nth-child(5) {
-                display: block;
                 grid-column: 11 / span 2;
             }
     
-    .content_row_2 {
-        width: 100%;
-        display: grid;
-        grid-template-columns: $column_repeat;
-        padding-top: 2px;
-        transition: all 500ms;
-    }
+    /*row 2------------------------*/
     .content_row_2:hover {
         padding-left: 100%;
         transition: all 1s;
     }
             .content_row_2>.con_grid:nth-child(1) {
-                display: block;
                 grid-column: 1 / span 2;
             }
             .content_image_02 {
-                display: block;
                 grid-column: 3 / $image_span;
             }
             .content_title_02 {
-                display: block;
                 grid-column: 5 / $text_span;
             }
             .content_row_2>.con_grid:nth-child(4) {
-                display: block;
                 grid-column: 10 / $image_span;
             }
             .content_row_2>.con_grid:nth-child(5) {
-                display: block;
                 grid-column: 12 / span 1;
             }
 
-    .content_row_3 {
-        width: 100%;
-        display: grid;
-        grid-template-columns: $column_repeat;
-        padding-top: 2px;
-        transition: all 500ms;
-    }
+    /*row 3------------------*/
     .content_row_3:hover {
         padding-left: 100%;
         transition: all 1s;
     }
             .content_row_3>.con_grid:nth-child(1) {
-                display: block;
                 grid-column: 1 / span 3;
             } 
             .content_image_03 {
-                display: block;
                 grid-column: 4 / $image_span;
             }
             .content_title_03 {
-                display: block;
                 grid-column: 6 / $text_span;
             }
             .content_row_3>.con_grid:nth-child(4) {
-                display: block;
                 grid-column: 11 / span 2;
             }
 
-    .content_row_4 {
-        width: 100%;
-        display: grid;
-        grid-template-columns: $column_repeat;
-        padding-top: 2px;
-        transition: all 500ms;
-    }
+    /*row 4------------------------*/
     .content_row_4:hover {
         padding-left: 100%;
         transition: all 1s;
     }
             .content_row_4>.con_grid:nth-child(1) {
-                display: block;
                 grid-column: 1 / span 4;
             } 
             .content_image_04 {
-                display: block;
                 grid-column: 5 / $image_span;
             }
             .content_title_04 {
-                display: block;
                 grid-column: 7 / $text_span;
             }
             .content_row_4>.con_grid:nth-child(4) {
-                display: block;
                 grid-column: 12 / span 1;
             }
 
-    .content_row_5 {
-        width: 100%;
-        display: grid;
-        grid-template-columns:  $column_repeat;
-        padding-top: 2px;
-        transition: all 500ms;
-    }
+    /*row 5----------------------------------*/
     .content_row_5:hover {
         padding-left: 100%;
         transition: all 1s;
     }
             .content_row_5>.con_grid:nth-child(1) {
-                display: block;
                 grid-column: 1 / span 5;
             } 
             .content_image_05 {
-                display: block;
                 grid-column: 6 / $image_span;
             }
             .content_title_05 {
-                display: block;
                 grid-column: 8 / $text_span;
+            }   
+            .content_row_5 > .con_grid:nth-child(4) {
+            display: none;
+            grid-column: 0;
             }
-    

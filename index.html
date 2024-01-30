@@ -1,8 +1,11 @@
+<!-- homepage link https://hhhodo.github.io/portfolio/index.html-->
+<!--로컬에서는 열 수 없습니다. 만약 로컬에서 열 경우, 하단의 순서를 따라주세요.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +49,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <!--MAIN-->
@@ -72,7 +75,7 @@
                 <div class="con_blank"></div>
 
                 <!--자기소개-->
-                <section class="main_intro"  id="containerId">
+                <section class="main_intro"  id="about">
                     <div class="sticky">
                         
                         <!--텍스트 그리드-->
@@ -139,7 +142,7 @@
                                 LottieInteractivity.create({
                                 player: '#plz',
                                 mode: 'scroll',
-                                container: '#containerId',
+                                container: '#about',
                                 actions: [
                                     {
                                     visibility: [0, 0.4],
@@ -169,7 +172,7 @@
                 <!--첫 줄 길이를 스크롤에 따라 조절-->
                 <div class="content_all">
                     <h1> Portfolio </h1>
-                    <section class="content_grid">
+                    <section class="content_grid" id="portfolio">
                         <div class="content_row_1">
                                 <div class="con_grid"> &nbsp; </div>
                                 <div class="content_image_01 con_grid">
@@ -229,6 +232,7 @@
                                     <p class="content_text_light">GRAPHIC DESIGN</p>
                                     <p class="content_text_title">일러스트 작업 모음</p>
                                 </div>
+                                <div class="con_grid"> &nbsp; </div>
                         </div>
                     </section>
                 </div>
@@ -236,10 +240,11 @@
             
             <div class="con_blank"></div>
 
-            <footer class="footer">
+            <footer class="footer" id="contact">
+                <div class="footer_blank"></div>
                     <div class="footer_mid">
                         <p class="footer_text"> 하나의 그림을 완성하는 </p>
-                        <div class="puzzle"> 퍼즐 </div>
+                        <div class="puzzle"><img src="./images/illust3.svg"></div>
                         <div class="footer_text">
                             디자이너 박지은입니다
                             <div class="send_mail">
