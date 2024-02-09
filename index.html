@@ -33,28 +33,6 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     <title>박지은입니다.</title>
-    <style>
-        #load {
-            position: absolute;
-            z-index: 9999;
-            width: 100%;
-            height: 100%;
-
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            background-color: #fff;
-            opacity: 1;
-            transition: all 200ms ease-out;
-        }
-        .loadtext {
-            width: 30%;
-            height: auto;
-            margin: 0 auto;
-            padding-bottom: 3rem;
-            transition: all 300ms ease-out;
-        }
-    </style>
 </head>
 <body>
     <!--loading page-->
@@ -62,7 +40,6 @@
         <lottie-player
             class="loadtext"
             src="./json/Loading.json"
-            width="100%"
             autoplay
             speed="0.5">
         </lottie-player>

@@ -30,6 +30,7 @@
                         flex-flow: row nowrap;
                         justify-content: left;
                         height: 2.4rem;
+                        margin-top: 0.4rem;
                     }
                             .font_16 {
                                 font-size: 1.6rem;

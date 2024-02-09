@@ -14,6 +14,8 @@
     .back_gradient {display: none;}
     .hoverarea {display: none;}
     .mouse_cursor {display: none;}
+    /*loading page*/
+    .loadtext {width: 30%;}
     /*home.css*/
     .main_home { padding: 0 12%;}
     .main_text_box { top: 24rem;}
@@ -32,6 +34,8 @@
     .puzzle {width: 35%; height: 35vw;}
 }
 @media all and (max-width: 768px) {
+    /*loading page*/
+    .loadtext {width: 80vw;}
     /*header*/
     .header {height: 6rem; padding: 0 2.4rem;}
     .header_logo {line-height: 6rem;}

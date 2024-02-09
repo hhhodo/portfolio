@@ -37,3 +37,24 @@ li {
     text-decoration: none;
 }
 
+/*loading page*/
+        #load {
+            position: absolute;
+            z-index: 9999;
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            background-color: #fff;
+            opacity: 1;
+            transition: all 200ms ease-out;
+        }
+        .loadtext {
+            width: 30%;
+            height: auto;
+            margin: 0 auto;
+            padding-bottom: 3rem;
+            transition: all 300ms ease-out;
+        }
