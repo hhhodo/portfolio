@@ -24,7 +24,6 @@
 
                 font-size: 3rem;
                 font-weight: var(--font-bold);
-                margin: 21rem 9rem;
             }
                     .send_mail {
                         display: flex;
@@ -38,24 +37,31 @@
                             }
                             .send_mail>div {display: flex; align-items: center; }
             .puzzle {
+                position: relative;
                 max-width: 70rem;
                 max-height: 80rem;
                 width: 65rem;
                 height: 65rem;
             }
+                .click_me {
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -25px;
+                    width: 100%;
+                    
+                    font-family: var(--font-english);
+                    font-size: 1.4rem;
+                    text-align: center;
+                    
+                    z-index: 2;
+                    opacity: 1;
+                    pointer-events: none;
+                }
             .puzzle img {
                 position: absolute;
-                max-width: 70rem;
-                width: 65rem;
-                height: 65rem;
+                width: 100%;
                 object-fit: contain;
             }
-                #footer-img {
-                    display: block;
-                }
-                #footer-gif {
-                    display: none;
-                }
     .footer_contact {
         width: 60rem;
         height: 12.6rem;

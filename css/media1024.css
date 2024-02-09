@@ -40,6 +40,7 @@
     .main { width: 100%;}
     .main_text_01 {font-size: 5rem; line-height: 6rem; flex-flow: row wrap;}
     .nametext {width: 25rem;}
+    .main_text_box {position: absolute;}
     /*main_intro*/
     .sticky {position: absolute; height: 200vh;}
     .main_intro_bg { position: sticky; top: 0; width: 100%; height: 80vh; right: 10%;}
@@ -58,7 +59,7 @@
     }
     .intro_title {width: 80%; margin-bottom: 2.8rem;}
     /*contents all*/
-    .content_grid { max-height: 130rem;}
+    .content_grid { max-height: 130rem; position: absolute; top: 20rem;}
     .content_text_box {
         padding: 0 1.6rem;
     }
@@ -171,8 +172,8 @@
     .footer_blank {
         height: auto;
     }
-    .footer_mid {flex-flow: column wrap; align-items: center;}
-        .puzzle {width: calc(100% - 2rem); height: auto;}
+    .footer_mid {flex-flow: row wrap;}
+        .puzzle {width: 100vw; height: 100vw;}
     .footer_text {font-size: 2.4rem; margin: 2rem auto;}
         .send_mail {
             justify-content: center;

@@ -2,7 +2,7 @@
 .main_intro {
     width: 100%;
     height: 200vh;
-    padding: 0 16.7%;
+    padding: 0 13%;
     position: relative;
     clear: both;
     opacity: 0;
@@ -19,7 +19,7 @@
             width: 55rem;
             height: 100rem;
             position: absolute;
-            padding: 0;
+            margin-right: 2rem;
             top: 0;
             right: 0;
             z-index: 1;
