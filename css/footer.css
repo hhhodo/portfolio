@@ -43,6 +43,19 @@
                 width: 65rem;
                 height: 65rem;
             }
+            .puzzle img {
+                position: absolute;
+                max-width: 70rem;
+                width: 65rem;
+                height: 65rem;
+                object-fit: contain;
+            }
+                #footer-img {
+                    display: block;
+                }
+                #footer-gif {
+                    display: none;
+                }
     .footer_contact {
         width: 60rem;
         height: 12.6rem;

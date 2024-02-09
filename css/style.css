@@ -101,3 +101,19 @@ body {
             border-radius: 100%;
             background: #fff;
         }
+        /*------footer cursor--------*/
+        .cursor_actives {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgb(255, 255, 255) 45%, rgba(255,255,255,0) 70%);
+            border-radius: 100%;
+            transition: all 50ms;
+            transition: width 300ms ease-out, height 300ms ease-out;
+            z-index: 21;
+        }
+                .mouse_cursor.cursor_actives.hover {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background: #fff;
+                }

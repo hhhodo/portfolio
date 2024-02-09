@@ -5,7 +5,9 @@ const mouseCursor = document.querySelector(".mouse_cursor");
 const blueCursor = document.querySelector('.blue_gradient');
 //===============버튼 불러오기====================//
 const navText = document.querySelectorAll(".overlay li");
-
+//================footer 이미지 클릭 시 변경=======//
+const footerImg = document.querySelector("#footer-img");
+const footerGif = document.querySelector('#footer-gif');
 //==============observer 타겟====================//
 const mainHome = document.querySelector('.main_home');
 const mainIntro = document.querySelector('.main_intro');
@@ -87,21 +89,6 @@ hoverArea.addEventListener("mouseout", (e) => {
 //hamburger 버튼 작동 시
 let clickCount = 0;
 
-navMenu.addEventListener('click', () => {
-    hamBurger.classList.toggle('cancel');
-    mouseCursor.classList.toggle('cursor_active');
-    clickCount++; // 클릭 수 증가
-
-    if (clickCount % 2 !== 0) {
-        navMenu.style.height = '100%';
-        navMenu.classList.add('open');
-    } else {
-        navMenu.style.height = '0';
-        setTimeout(() => {
-            navMenu.classList.remove('open')
-        }, 300);
-    }
-})
 hamBurger.addEventListener('click', () => {
     hamBurger.classList.toggle('cancel');
     mouseCursor.classList.toggle('cursor_active');
@@ -125,4 +112,25 @@ hamBurger.addEventListener('mouseout', () => {
     mouseCursor.classList.remove('hover');
 })
 
+//footer 움직임
+footerImg.addEventListener('mouseover', ()=>{
+    mouseCursor.classList.add('cursor_actives');
+    console.log('cursor_active')
+})
+footerImg.addEventListener('mouseout', ()=>{
+    mouseCursor.classList.add('hover')
+    setTimeout(() => {
+    mouseCursor.classList.remove('cursor_actives');
+    mouseCursor.classList.remove('hover');
+}, 300);
+})
+//click event
+footerImg.addEventListener('click',()=>{
+    footerImg.style.display = 'none';
+    footerGif.style.display = 'block';
+})
+footerGif.addEventListener('click',()=>{
+    footerGif.style.display = 'none';
+    footerImg.style.display = 'block';
+})
 }
