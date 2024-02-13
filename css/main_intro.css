@@ -38,7 +38,7 @@
 
         .main_intro_text {
             position: absolute;
-            left: 0;
+            left: 3rem;
             top: 35rem;
             display: grid;
             grid-template-areas:
