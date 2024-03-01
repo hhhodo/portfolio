@@ -1,6 +1,17 @@
 "use strict";
 
-//===============네비게이션메뉴====================//
+setTimeout(function () {
+  // 로딩이 완료되면 로딩 페이지를 숨기고 본문 내용을 표시합니다.
+  loadText.style.opacity = '0'; // CSS 애니메이션의 트랜지션 완료 이벤트를 대기합니다.
+
+  loading_page.addEventListener('transitionend', function () {
+    // 로딩 페이지를 숨깁니다.
+    loading_page.style.opacity = '0';
+    loading_page.style.display = 'none';
+  });
+  mainTextBox.style.opacity = '1';
+}, 2000); //===============네비게이션메뉴====================//
+
 var hamBurger = document.querySelector(".hamburger");
 var navMenu = document.querySelector(".overlay");
 var mouseCursor = document.querySelector(".mouse_cursor");
@@ -9,9 +20,9 @@ var blueCursor = document.querySelector('.blue_gradient'); //===============버�
 var navText = document.querySelectorAll(".overlay li"); //================footer 이미지 클릭 시 변경=======//
 
 var footerPuzzle = document.querySelector('.puzzle');
+var clickArea = document.querySelector('#click_area');
 var footerGif = document.querySelector('#footer-gif');
-var animatedSrc = footerGif.dataset.animated;
-var staticSrc = footerGif.dataset["static"];
+var footerImg = document.querySelector('.puzzle img');
 var footerText = document.querySelector('.click_me'); //==============observer 타겟====================//
 
 var mainHome = document.querySelector('.main_home');
@@ -24,14 +35,7 @@ var hoverArea = document.querySelector('.hoverarea'); //loading
 var loading_page = document.getElementById("load");
 var loadText = document.querySelector('.loadtext');
 var nameText = document.querySelector('.nametext');
-window.addEventListener('load', function () {
-  // 로딩이 완료되면 로딩 페이지를 숨기고 본문 내용을 표시합니다.
-  loadText.style.opacity = '0';
-  setTimeout(function () {
-    loading_page.style.opacity = '0';
-    loadText.style.display = 'none';
-  }, 500);
-});
+var mainTextBox = document.querySelector('.main_text_box');
 /*
 setTimeout(function() {
     loadText.style.opacity = '0';
@@ -50,8 +54,7 @@ setTimeout(function () {
       state: 'autoplay'
     }]
   });
-  loading_page.style.display = 'none';
-}, 3500); //scroll down 유도
+}, 1900); //scroll down 유도
 
 var scrollDown = document.getElementById('scroll-down');
 var scrollPlz = setTimeout(function () {
@@ -178,15 +181,23 @@ window.onload = function () {
   }); //click event
 
   var clickCounts = 0;
-  footerGif.addEventListener('click', function () {
+  clickArea.addEventListener('click', function () {
     clickCounts++; // 클릭 수 증가
 
+    console.log(clickCount);
+
     if (clickCounts % 2 !== 0) {
-      footerGif.src = animatedSrc;
       footerText.style.display = 'none';
+      footerImg.style.opacity = '0';
+      footerGif.style.display = 'block'; //처음부터 다시시작
+
+      footerGif.currentTime = 0;
+      footerGif.play();
     } else {
-      footerGif.src = staticSrc;
       footerText.style.display = 'block';
+      footerImg.style.opacity = '1';
+      footerGif.style.display = 'none';
+      footerGif.pause();
     }
   });
 };

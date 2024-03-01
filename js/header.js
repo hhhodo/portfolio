@@ -1,3 +1,17 @@
+
+setTimeout(function() {
+    // 로딩이 완료되면 로딩 페이지를 숨기고 본문 내용을 표시합니다.
+    loadText.style.opacity = '0';
+    // CSS 애니메이션의 트랜지션 완료 이벤트를 대기합니다.
+    loading_page.addEventListener('transitionend', function() {
+        // 로딩 페이지를 숨깁니다.
+        loading_page.style.opacity = '0';
+        loading_page.style.display = 'none';
+    });
+
+    mainTextBox.style.opacity = '1';
+}, 2000)
+
 //===============네비게이션메뉴====================//
 const hamBurger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".overlay");
@@ -7,10 +21,10 @@ const blueCursor = document.querySelector('.blue_gradient');
 const navText = document.querySelectorAll(".overlay li");
 //================footer 이미지 클릭 시 변경=======//
 const footerPuzzle = document.querySelector('.puzzle');
+const clickArea = document.querySelector('#click_area');
 const footerGif = document.querySelector('#footer-gif');
+const footerImg = document.querySelector('.puzzle img');
 
-const animatedSrc = footerGif.dataset.animated;
-const staticSrc = footerGif.dataset.static;
 const footerText = document.querySelector('.click_me');
 //==============observer 타겟====================//
 const mainHome = document.querySelector('.main_home');
@@ -25,15 +39,8 @@ const hoverArea = document.querySelector('.hoverarea');
 const loading_page = document.getElementById("load");
 const loadText = document.querySelector('.loadtext');
 const nameText = document.querySelector('.nametext');
+const mainTextBox = document.querySelector('.main_text_box');
 
-window.addEventListener('load', function() {
-    // 로딩이 완료되면 로딩 페이지를 숨기고 본문 내용을 표시합니다.
-    loadText.style.opacity = '0';
-    setTimeout(function(){
-        loading_page.style.opacity = '0';
-        loadText.style.display = 'none';
-    },500)
-});
 /*
 setTimeout(function() {
     loadText.style.opacity = '0';
@@ -51,9 +58,8 @@ setTimeout(function() {
         state: 'autoplay'
     }]
     });
-    
-    loading_page.style.display = 'none';
-}, 3500)
+}, 1900)
+
 //scroll down 유도
 const scrollDown = document.getElementById('scroll-down')
 
@@ -196,16 +202,24 @@ footerPuzzle.addEventListener('mouseout', ()=>{
 })
 //click event
 let clickCounts = 0
-footerGif.addEventListener('click',()=>{
+clickArea.addEventListener('click',()=>{
 
     clickCounts++; // 클릭 수 증가
+    console.log(clickCount)
 
     if (clickCounts % 2 !== 0) {
-        footerGif.src = animatedSrc;
         footerText.style.display = 'none';
+        footerImg.style.opacity = '0';
+        footerGif.style.display = 'block';
+
+        //처음부터 다시시작
+        footerGif.currentTime = 0;
+        footerGif.play();
     } else {
-        footerGif.src = staticSrc;
         footerText.style.display = 'block';
+        footerImg.style.opacity = '1';
+        footerGif.style.display = 'none';
+        footerGif.pause();
     }
 })
 }

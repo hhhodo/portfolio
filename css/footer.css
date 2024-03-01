@@ -58,10 +58,17 @@
                     opacity: 1;
                     pointer-events: none;
                 }
-            .puzzle img {
+                .puzzle img {
+                    position: absolute;
+                    width: 100%;
+                    object-fit: contain;
+                    display: block;
+                }
+            #footer-gif {
                 position: absolute;
                 width: 100%;
                 object-fit: contain;
+                display: none;
             }
     .footer_contact {
         width: 60rem;
