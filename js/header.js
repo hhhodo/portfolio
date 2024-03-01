@@ -26,12 +26,22 @@ const loading_page = document.getElementById("load");
 const loadText = document.querySelector('.loadtext');
 const nameText = document.querySelector('.nametext');
 
+window.addEventListener('load', function() {
+    // 로딩이 완료되면 로딩 페이지를 숨기고 본문 내용을 표시합니다.
+    loadText.style.opacity = '0';
+    setTimeout(function(){
+        loading_page.style.opacity = '0';
+        loadText.style.display = 'none';
+    },500)
+});
+/*
 setTimeout(function() {
     loadText.style.opacity = '0';
     setTimeout(function(){
         loading_page.style.opacity = '0';
     },500)
 },3000);
+*/
 //로딩 완료시 등장하는 애들
 setTimeout(function() {
     LottieInteractivity.create({
@@ -135,16 +145,32 @@ hoverArea.addEventListener("mouseout", (e) => {
 let clickCount = 0;
 
 hamBurger.addEventListener('click', () => {
-    hamBurger.classList.toggle('cancel');
-    mouseCursor.classList.toggle('cursor_active');
+    hamBurger.classList.add('cancel');
+    mouseCursor.classList.add('cursor_active');
 
     clickCount++; // 클릭 수 증가
 
     if (clickCount % 2 !== 0) {
         navMenu.style.height = '100%';
         navMenu.classList.add('open');
+        //hamburger 내에 있는 요소들 클릭 이벤트
+        const navAll = document.querySelectorAll('.overlay a')
+        navAll.forEach(link => {
+            link.addEventListener('click', () => {
+                clickCount++; // 클릭 수 증가
+
+                navMenu.style.height = '0';
+                hamBurger.classList.remove('cancel');
+                mouseCursor.classList.remove('cursor_active');
+                setTimeout(() => {
+                    navMenu.classList.remove('open')
+                }, 300);
+            });
+        });
     } else {
         navMenu.style.height = '0';
+        hamBurger.classList.remove('cancel');
+        mouseCursor.classList.remove('cursor_active');
         setTimeout(() => {
             navMenu.classList.remove('open')
         }, 300);
@@ -156,7 +182,6 @@ hamBurger.addEventListener('mouseover', () => {
 hamBurger.addEventListener('mouseout', () => {
     mouseCursor.classList.remove('hover');
 })
-
 //footer 움직임
 footerPuzzle.addEventListener('mouseover', ()=>{
     mouseCursor.classList.add('cursor_actives');

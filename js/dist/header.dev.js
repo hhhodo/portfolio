@@ -6,14 +6,68 @@ var navMenu = document.querySelector(".overlay");
 var mouseCursor = document.querySelector(".mouse_cursor");
 var blueCursor = document.querySelector('.blue_gradient'); //===============버튼 불러오기====================//
 
-var navText = document.querySelectorAll(".overlay li"); //==============observer 타겟====================//
+var navText = document.querySelectorAll(".overlay li"); //================footer 이미지 클릭 시 변경=======//
+
+var footerPuzzle = document.querySelector('.puzzle');
+var footerGif = document.querySelector('#footer-gif');
+var animatedSrc = footerGif.dataset.animated;
+var staticSrc = footerGif.dataset["static"];
+var footerText = document.querySelector('.click_me'); //==============observer 타겟====================//
 
 var mainHome = document.querySelector('.main_home');
 var mainIntro = document.querySelector('.main_intro');
 var fooTer = document.querySelector('.footer'); //첫 페이지 observe
 
 var targetArea = document.querySelector('.backgradient');
-var hoverArea = document.querySelector('.hoverarea'); //fade 효과
+var hoverArea = document.querySelector('.hoverarea'); //loading
+
+var loading_page = document.getElementById("load");
+var loadText = document.querySelector('.loadtext');
+var nameText = document.querySelector('.nametext');
+window.addEventListener('load', function () {
+  // 로딩이 완료되면 로딩 페이지를 숨기고 본문 내용을 표시합니다.
+  loadText.style.opacity = '0';
+  setTimeout(function () {
+    loading_page.style.opacity = '0';
+    loadText.style.display = 'none';
+  }, 500);
+});
+/*
+setTimeout(function() {
+    loadText.style.opacity = '0';
+    setTimeout(function(){
+        loading_page.style.opacity = '0';
+    },500)
+},3000);
+*/
+//로딩 완료시 등장하는 애들
+
+setTimeout(function () {
+  LottieInteractivity.create({
+    player: '#name-text',
+    mode: 'chain',
+    actions: [{
+      state: 'autoplay'
+    }]
+  });
+  loading_page.style.display = 'none';
+}, 3500); //scroll down 유도
+
+var scrollDown = document.getElementById('scroll-down');
+var scrollPlz = setTimeout(function () {
+  scrollDown.style.transition = 'all 500ms';
+  scrollDown.style.opacity = '1';
+}, 5000);
+window.addEventListener('scroll', function () {
+  //일정 높이 지났을 때 스크롤 사라짐
+  if (window.scrollY < 100) {
+    scrollDown.style.opacity = '1';
+  } else {
+    clearTimeout(scrollPlz);
+    scrollDown.style.transition = 'all 100ms';
+    scrollDown.style.opacity = '0';
+  }
+}); //fade 효과
 
 window.onload = function () {
   var observer = new IntersectionObserver(function (e) {
@@ -74,31 +128,32 @@ window.onload = function () {
   }); //hamburger 버튼 작동 시
 
   var clickCount = 0;
-  navMenu.addEventListener('click', function () {
-    hamBurger.classList.toggle('cancel');
-    mouseCursor.classList.toggle('cursor_active');
-    clickCount++; // 클릭 수 증가
-
-    if (clickCount % 2 !== 0) {
-      navMenu.style.height = '100%';
-      navMenu.classList.add('open');
-    } else {
-      navMenu.style.height = '0';
-      setTimeout(function () {
-        navMenu.classList.remove('open');
-      }, 300);
-    }
-  });
   hamBurger.addEventListener('click', function () {
-    hamBurger.classList.toggle('cancel');
-    mouseCursor.classList.toggle('cursor_active');
+    hamBurger.classList.add('cancel');
+    mouseCursor.classList.add('cursor_active');
     clickCount++; // 클릭 수 증가
 
     if (clickCount % 2 !== 0) {
       navMenu.style.height = '100%';
-      navMenu.classList.add('open');
+      navMenu.classList.add('open'); //hamburger 내에 있는 요소들 클릭 이벤트
+
+      var navAll = document.querySelectorAll('.overlay a');
+      navAll.forEach(function (link) {
+        link.addEventListener('click', function () {
+          clickCount++; // 클릭 수 증가
+
+          navMenu.style.height = '0';
+          hamBurger.classList.remove('cancel');
+          mouseCursor.classList.remove('cursor_active');
+          setTimeout(function () {
+            navMenu.classList.remove('open');
+          }, 300);
+        });
+      });
     } else {
       navMenu.style.height = '0';
+      hamBurger.classList.remove('cancel');
+      mouseCursor.classList.remove('cursor_active');
       setTimeout(function () {
         navMenu.classList.remove('open');
       }, 300);
@@ -109,5 +164,29 @@ window.onload = function () {
   });
   hamBurger.addEventListener('mouseout', function () {
     mouseCursor.classList.remove('hover');
+  }); //footer 움직임
+
+  footerPuzzle.addEventListener('mouseover', function () {
+    mouseCursor.classList.add('cursor_actives');
+  });
+  footerPuzzle.addEventListener('mouseout', function () {
+    mouseCursor.classList.add('hover');
+    setTimeout(function () {
+      mouseCursor.classList.remove('cursor_actives');
+      mouseCursor.classList.remove('hover');
+    }, 300);
+  }); //click event
+
+  var clickCounts = 0;
+  footerGif.addEventListener('click', function () {
+    clickCounts++; // 클릭 수 증가
+
+    if (clickCounts % 2 !== 0) {
+      footerGif.src = animatedSrc;
+      footerText.style.display = 'none';
+    } else {
+      footerGif.src = staticSrc;
+      footerText.style.display = 'block';
+    }
   });
 };
