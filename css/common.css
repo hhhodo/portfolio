@@ -35,7 +35,10 @@ ul {
 li {
     text-decoration: none;
 }
-
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
 /*loading page*/
         #load {
             position: absolute;
