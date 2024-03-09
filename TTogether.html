@@ -3,13 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--css-->
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/header.css" rel="stylesheet">
+
+    <link href="./css/home.css" rel="stylesheet">
+    <link href="./css/main_intro.css" rel="stylesheet">
+    <link href="./css/content.css" rel="stylesheet">
+    <link href="./css/contact.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <!--SCSS-->
+    <link href="./css/contents.css" rel="stylesheet">
+    <!--반응형-->
+    <link href="./css/media1024.css" rel="stylesheet">
+
+    <script type="module" src="./js/lottie.js"> </script>
+    <script type="module" src="./js/cursor.js"></script>
+
+    <!--lottie 링크-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <title>박지은입니다.</title>
 </head>
 <body>
-    <img src="./images/interaction_01.gif">
-    <video id="myVideo" width="500" height="1000" autoplay loop>
-        <source src="./images/interaction_reverse_video.mp4" type="video/mp4">
-    </video>
+    <!--mouse cursor-->
+    <div class="mouse_cursor"></div>
+    <!--header-->
+    <header class="header">
+        <div class="header_logo"> PORTFOLIO </div>
+        <button class="hamburger"></button>
+    </header>
+    <div class="overlay">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 </body>
 </html>

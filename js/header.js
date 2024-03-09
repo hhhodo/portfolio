@@ -19,6 +19,7 @@ const mouseCursor = document.querySelector(".mouse_cursor");
 const blueCursor = document.querySelector('.blue_gradient');
 //===============버튼 불러오기====================//
 const navText = document.querySelectorAll(".overlay li");
+
 //================footer 이미지 클릭 시 변경=======//
 const footerPuzzle = document.querySelector('.puzzle');
 const clickArea = document.querySelector('#click_area');
@@ -98,41 +99,6 @@ const observer = new IntersectionObserver((e) => {
 observer.observe(mainHome);
 observer.observe(mainIntro);
 observer.observe(fooTer);
-
-//마우스 커서 변경
-window.addEventListener("mousemove", (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    // 화면 중심 좌표 계산
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-
-    // 마우스 좌표와 상반되는 위치 계산
-    const oppositeX = centerX + (centerX - mouseX);
-    const oppositeY = centerY + (centerY - mouseY);
-
-    mouseCursor.style.left = mouseX + 'px';
-    mouseCursor.style.top = mouseY + 'px';
-    targetArea.style.left = oppositeX + 'px';
-    targetArea.style.top = oppositeY + 'px';
-    
-    //일정 높이 지났을 때 그라데이션 사라짐
-    if(window.scrollY < 800) {
-        targetArea.style.display = 'block';
-    } else {
-        targetArea.style.display = 'none';
-    }
-});
-//특정 버튼 호버시 커서 변경
-navText.forEach(link => {
-    link.addEventListener("mouseover", ()=> {
-        mouseCursor.classList.add('hover');
-    })
-    link.addEventListener("mouseout", ()=> {
-        mouseCursor.classList.remove('hover');
-    })
-});
 
 //마우스가 첫 화면의 그라데이션에 호버했을때
 hoverArea.addEventListener("mouseover", (e) => {

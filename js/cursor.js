@@ -1,143 +1,70 @@
-/*window.onload = function () {
-    const cursor = document.querySelector('.mouse_cursor');
 
-    window.addEventListener("scroll", cursor);
-    window.addEventListener("mousemove", cursor);
+//===============네비게이션메뉴====================//
+const hamBurger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".overlay");
+const mouseCursor = document.querySelector(".mouse_cursor");
+const blueCursor = document.querySelector('.blue_gradient');
+//===============버튼 불러오기====================//
+const navText = document.querySelectorAll(".overlay li");
 
-    function cursor(e) {
-        cursor.style.left = e.pageX + "px";
-        cursor.style.top = e.pageY - scrollY + "px";
-    }
-}
-==================================
-function mouseMove(e) {
-  e.preventDefault();
-  posX = e.clientX - originX;
-  poxY = e.clientY - originY;
-  
-  if (elmnt.offsetLeft + posX >= 0 && elmnt.offsetLeft + elmnt.offsetWidth + posX <= MAX_WIDTH) {
-    x = posX;
-  }
-  
-  if (elmnt.offsetTop + posY >= 0 && elmnt.offsetTop + elmnt.offsetHeight + posY <= MAX_HEIGHT) {
-    y = posY;
-  }
-  
-  elmnt.style.transform = `translate(${x}px, ${y}px)`;
-}
-==
-function mouseMove(e) {
-  e.preventDefault();
-  
-  setTimeout(() => {
-    const x = e.pageX - target.offsetLeft;
-    const y = e.pageY - target.offsetTop;
-    target.scrollLeft = scrollLeft - ((x - originX) * SPEED);
-    target.scrollTop = scrollTop - ((y - originY) * SPEED);
-  }, 0);
-}
-==
-function keepScrolling() {
-  if (!(isEdge && scrolling) {
-    scrolling = false;
-    return;
-  }
-  
-  // X축
-  if (elmnt.offsetLeft + x + scrollX >= 0 && elmnt.offsetLeft + x + scrollX + elmnt.offsetWidth <= MAX_WIDTH) {
-    canvas.scrollLeft += Math.floor(scrollX);
-    x += Math.floor(scrollX);
-    originX -= Math.floor(scrollX);
-  }
-  
-  // Y축
-  if ((elmnt.offsetTop + y + scrollY) >= 0 && (elmnt.offsetTop + y + scrollY + elmnt.offsetHeight) <= MAX_HEIGHT) {
-    canvas.scrollTop += Math.floor(scrollY);
-    y += Math.floor(scrollY);
-    originY -= Math.floor(scrollY);
-  }
 
-  elmnt.style.transform = `translate(${x}px, ${y}px)`;
+//마우스 커서 변경
+window.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
 
-  window.requestAnimationFrame(keepScrolling);
-}
-===============================================================
-$(function(){
-
-    // CURSOR
-    var cursor = $(".cursor"),
-    follower = $(".cursor-follower"),
-    cursor_img = $(".cursor_img");
-
-    var posX = 0,
-        posY = 0;
-    var mouseX = 0,
-        mouseY = 0;
-
-    TweenMax.to({}, 0.016, { // 값을 올릴수록 cursor-follower 영역이 늦게 따라옴
-        repeat: -1,
-        onRepeat: function() {
-            posX += (mouseX - posX) / 9;
-            posY += (mouseY - posY) / 9;
-
-            TweenMax.set(follower, {
-                css: {
-                left: posX - 12,
-                top: posY - 12
-                }
-            });
-
-            TweenMax.set(cursor, {
-                css: {
-                left: mouseX,
-                top: mouseY
-                }
-            });
-
-            TweenMax.set(cursor_img, {
-                css: {
-                left: mouseX - 24,
-                top: mouseY - 24
-                }
-            });
-        }
-    });
-
-    // cursor active area
-    $(".active_box").on("mousemove", function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    }).on("mouseenter", function(e) {
-        $(".cursor, .cursor-follower").css('opacity', 1);
-        $(".cursor_img").css('opacity', 0);
-    }).on("mouseleave", function(e) {
-        $(".cursor, .cursor-follower, .cursor_img").css('opacity', 0);
-    });
-
-    // cursor active area (style_2)
-    $(".cursor_style_2").on("mousemove", function(e) {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    }).on("mouseenter", function(e) {
-        $(".cursor_img").css('opacity', 1);
-        $(".cursor, .cursor-follower").css('opacity', 0);
-    }).on("mouseleave", function(e) {
-        $(".cursor_img").css('opacity', 0);
-        $(".cursor, .cursor-follower").css('opacity', 1);
-    });
-
-    // link area css 
-    $(".link").on("mouseenter", function() {
-        cursor.addClass("active");
-        follower.addClass("active");
-    }).on("mouseleave", function() {
-        cursor.removeClass("active");
-        follower.removeClass("active");
-    })
-
+  mouseCursor.style.left = mouseX + 'px';
+  mouseCursor.style.top = mouseY + 'px';
+});
+//특정 버튼 호버시 커서 변경
+navText.forEach(link => {
+  link.addEventListener("mouseover", ()=> {
+      mouseCursor.classList.add('hover');
+  })
+  link.addEventListener("mouseout", ()=> {
+      mouseCursor.classList.remove('hover');
+  })
 });
 
 
+//hamburger 버튼 작동 시
+let clickCount = 0;
 
+hamBurger.addEventListener('click', () => {
+    hamBurger.classList.add('cancel');
+    mouseCursor.classList.add('cursor_active');
 
-;*/
+    clickCount++; // 클릭 수 증가
+
+    if (clickCount % 2 !== 0) {
+        navMenu.style.height = '100%';
+        navMenu.classList.add('open');
+        //hamburger 내에 있는 요소들 클릭 이벤트
+        const navAll = document.querySelectorAll('.overlay a')
+        navAll.forEach(link => {
+            link.addEventListener('click', () => {
+                clickCount++; // 클릭 수 증가
+
+                navMenu.style.height = '0';
+                hamBurger.classList.remove('cancel');
+                mouseCursor.classList.remove('cursor_active');
+                setTimeout(() => {
+                    navMenu.classList.remove('open')
+                }, 300);
+            });
+        });
+    } else {
+        navMenu.style.height = '0';
+        hamBurger.classList.remove('cancel');
+        mouseCursor.classList.remove('cursor_active');
+        setTimeout(() => {
+            navMenu.classList.remove('open')
+        }, 300);
+    }
+});
+hamBurger.addEventListener('mouseover', () => {
+    mouseCursor.classList.add('hover');
+})
+hamBurger.addEventListener('mouseout', () => {
+    mouseCursor.classList.remove('hover');
+})

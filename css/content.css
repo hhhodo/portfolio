@@ -3,13 +3,16 @@
     height: 180vh;
     position: relative;
 }
-        .content_all>h1 {
-            height: 30rem;
+        .content_all h1 {
+            position: absolute;
+            top: -20vh;
+            width: 100vw;
+            height: 20rem;
             font-family: var(--font-english);
             font-weight: var(--font-redular);
-            font-size: 3rem;
+            font-size: 3.4rem;
             text-align: center;
-            line-height: 30rem;
+            line-height: 20rem;
         }
 .content_text_box {
     width: auto;
