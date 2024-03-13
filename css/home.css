@@ -15,7 +15,7 @@
             pointer-events: none;
             opacity: 0;
 
-            z-index: 99;
+            z-index: 3;
         }
 
 
@@ -32,7 +32,7 @@
 
             opacity: 0;
             transition: all 100ms;
-            z-index: 99;
+            z-index: 3;
         }
 
         .main_text_01 {

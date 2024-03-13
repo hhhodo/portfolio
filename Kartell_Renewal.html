@@ -14,12 +14,25 @@
     <link href="./css/header.css" rel="stylesheet">
 
     <link href="./css/ttogether.css" rel="stylesheet">
+    <link href="./css/kartell.css" rel="stylesheet">
     <link href="./css/detail_footer.css" rel="stylesheet">
     <!--반응형-->
     <link href="./css/media1024.css" rel="stylesheet">
 
-    <script type="module" src="./js/lottie.js"> </script>
-    <script type="module" src="./js/cursor.js"></script>
+    <!--three.js-->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+          }
+        }
+    </script>
+    <script  type="module" src="./js/kartell.js" defer></script>
+
+    
+    <script type="module" src="./js/lottie.js" defer> </script>
+    <script type="module" src="./js/cursor.js" defer></script>
 
     <!--lottie 링크-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
@@ -44,11 +57,8 @@
     </div>
     <!--page start-->
     <section class="container" id="start-point">
-        <img src="./images/page1_ttogether.png">
-        <img src="./images/page2_ttogether.webp">
-        <img src="./images/page3_ttogether.png">
-        <img src="./images/page4_ttogether.webp">
-        <img src="./images/page5_ttogether.png">
+        <div id="canvas"></div>
+        <div class="back_img"></div>
     </section>
     <!--top/down button-->
     <!--top-->

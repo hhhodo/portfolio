@@ -2,6 +2,8 @@
     position: relative;
     clear: both;
     width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #fff 97%, #242427 100%);
 }
 img {
     width: 100%;
