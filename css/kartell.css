@@ -1,10 +1,3 @@
-#canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
 .back_img {
     width: 100%;
     height: 100vh;
@@ -14,4 +7,39 @@
     left: 0;
     top: 0;
     z-index: -1;
+}
+.image_02 {
+    position: relative;
+    clear: both;
+    width: 100%;
+}
+    .image_02 video {
+        width: calc(100% - 42rem);
+        border-radius: 1.6rem;
+        border: 1px solid #000;
+
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        left: 21rem;
+    }
+.image_03 {
+    position: relative;
+    clear: both;
+    width: 100%;
+}
+    .image_03 video {
+        width: calc(100% - 42rem);
+        border-radius: 1.6rem;
+        border: 1px solid #000;
+
+        position: absolute;
+        z-index: 2;
+        top: 210rem;
+        left: 21rem;
+    }
+.image_04 {
+    width: 52.3%;
+    object-fit: contain;
+    margin-left: 38.5rem;
 }
