@@ -14,32 +14,32 @@
     width: 100%;
 }
     .image_02 video {
-        width: calc(100% - 42rem);
+        width: 79.2%;
         border-radius: 1.6rem;
         border: 1px solid #000;
 
         position: absolute;
         bottom: 0;
         z-index: 2;
-        left: 21rem;
+        left: 10.9%;
     }
-.image_03 {
+.image_04 {
     position: relative;
     clear: both;
     width: 100%;
 }
-    .image_03 video {
-        width: calc(100% - 42rem);
+    .image_04 video {
+        width: 79.2%;
         border-radius: 1.6rem;
         border: 1px solid #000;
 
         position: absolute;
         z-index: 2;
-        top: 210rem;
-        left: 21rem;
+        top: 0;
+        left: 10.9%;
     }
-.image_04 {
+.image_05 {
     width: 52.3%;
     object-fit: contain;
-    margin-left: 38.5rem;
+    margin-left: 37rem;
 }
