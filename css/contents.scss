@@ -1,4 +1,4 @@
-$column_repeat: repeat(12, minmax(2rem, auto));
+$column_repeat: repeat(12, minmax(2rem, 25rem));
 $column_1024: repeat(12, );
 
 $image_span: span 2;
@@ -13,12 +13,13 @@ $text_span: span 5;
     top: 20vh;
 
     display: grid;
-    grid-template-rows: repeat(4, minmax(12rem, auto));
+    grid-template-rows: repeat(4, minmax(12rem, 25rem));
     background: #000;
     padding-bottom: 2px;
 }
     .content_row_1, .content_row_2, .content_row_3, .content_row_4 {
         width: 100%;
+        max-height: 25rem;
         display: grid;
         grid-template-columns: $column_repeat;
         padding-top: 2px;
@@ -37,6 +38,9 @@ $text_span: span 5;
             }
             .content_image_01 {
                 grid-column: 2 / $image_span;
+                background-image: url(../images/slide_thumbnail_01.png);
+                background-position: center;
+                background-size: cover;
             }
             .content_title_01 {
                 grid-column: 4 / $text_span;
@@ -58,6 +62,9 @@ $text_span: span 5;
             }
             .content_image_02 {
                 grid-column: 3 / $image_span;
+                background-image: url(../images/slide_thumbnail_02.png);
+                background-position: center;
+                background-size: cover;
             }
             .content_title_02 {
                 grid-column: 5 / $text_span;
@@ -79,6 +86,9 @@ $text_span: span 5;
             } 
             .content_image_03 {
                 grid-column: 4 / $image_span;
+                background-image: url(../images/slide_thumbnail_03.png);
+                background-position: center;
+                background-size: cover;
             }
             .content_title_03 {
                 grid-column: 6 / $text_span;
@@ -97,6 +107,9 @@ $text_span: span 5;
             } 
             .content_image_04 {
                 grid-column: 5 / $image_span;
+                background-image: url(../images/slide_thumbnail_04.png);
+                background-position: center;
+                background-size: cover;
             }
             .content_title_04 {
                 grid-column: 7 / $text_span;
