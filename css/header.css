@@ -48,7 +48,7 @@
     z-index: 22;
 }
 .overlay ul li {
-    margin-left: auto;
+    margin-right: auto;
 }
 .overlay ul li a {
     width: 34rem;

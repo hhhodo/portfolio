@@ -45,7 +45,7 @@
             "a a"
             "b c"
             "d e";
-            grid-template-columns: 22rem 26rem;
+            grid-template-columns: 22rem 28rem;
             grid-template-rows: 14rem 12rem 12rem;
             grid-gap: 0;
             z-index: 3;

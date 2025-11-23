@@ -61,4 +61,21 @@ hamBurger.addEventListener('mouseover', function () {
 });
 hamBurger.addEventListener('mouseout', function () {
   mouseCursor.classList.remove('hover');
+}); //페이지 이동시 로딩화면 안뜨게
+
+document.addEventListener("DOMContentLoaded", function () {
+  var loader = document.getElementById("load"); // 첫 방문인지 체크
+
+  if (!sessionStorage.getItem("visited")) {
+    // 첫 방문이면 로딩 표시
+    loader.style.visibility = "visible";
+    loader.style.opacity = "1";
+    sessionStorage.setItem("visited", "true");
+    setTimeout(function () {
+      loader.style.opacity = "0";
+      setTimeout(function () {
+        loader.style.visibility = "hidden";
+      }, 500);
+    }, 1800);
+  }
 });
